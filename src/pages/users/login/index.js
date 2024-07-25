@@ -4,8 +4,8 @@ import React, { Fragment, useState } from 'react'
 
 const Login = () => {
   const [params, setParams] = useState({
-    username: '',
-    password: '',
+    username: 'hrithik@scube.me',
+    password: 'admin123',
   })
 
   const [errors, setErrors] = useState({
