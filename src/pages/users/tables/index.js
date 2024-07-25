@@ -1,5 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb'
 import Layout from '@/components/Layout'
+import Head from 'next/head'
 import React, { useState } from 'react'
 import { Fragment } from 'react'
 
@@ -143,6 +144,9 @@ const Tables = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Tables</title>
+      </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
 
@@ -233,104 +237,106 @@ const Tables = () => {
 
           {activeMenu === 'running_tables' && (
             <div className="flex flex-col gap-5">
-              {React.Children.toArray([1, 2].map((item) => (
-                <div className="border border-[#808080]/40 w-full bg-white">
-                  <div className="h-16 w-full flex items-center justify-between pl-5 border-b border-[#808080]/40">
-                    <h2 className="text-sm font-semibold text-[#121212] uppercase">
-                      Chai Fast
-                    </h2>
+              {React.Children.toArray(
+                [1, 2].map((item) => (
+                  <div className="border border-[#808080]/40 w-full bg-white">
+                    <div className="h-16 w-full flex items-center justify-between pl-5 border-b border-[#808080]/40">
+                      <h2 className="text-sm font-semibold text-[#121212] uppercase">
+                        Chai Fast
+                      </h2>
 
-                    <div className="flex items-center divide-x divide-[#808080]/50 h-full">
-                      <div className="flex flex-col text-start px-4 h-full items-start justify-center flex-shrink-0 bg-gray-100">
-                        <p className="text-xs text-[#808080] font-medium">
-                          Estimated Total
-                        </p>
-                        <p className="text-lg font-bold text-[#121212]">
-                          $105.00
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col text-start px-4 h-full items-start justify-center flex-shrink-0 bg-gray-100">
-                        <p className="text-xs text-[#808080] font-medium">
-                          Total Running Tables
-                        </p>
-                        <p className="text-lg font-bold text-[#121212]">1</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-4 flex flex-wrap gap-5 w-full overflow-x-auto flex-shrink-0">
-                    <div className="h-80 w-80 rounded-lg border border-[#808080]/40 flex flex-col justify-between overflow-hidden">
-                      <div className="py-4 px-6 w-full flex items-center justify-between bg-[#f2f2f2] border-b border-[#808080]/40">
-                        <p className="text-sm font-medium text-[#121212]/90">
-                          Table
-                        </p>
-
-                        <p className="text-sm font-medium text-[#121212]/90">
-                          23 Mins
-                        </p>
-                      </div>
-
-                      <div className="flex flex-col p-4 gap-4 divide-y divide-[#808080]/40">
-                        <div className="grid grid-cols-2">
-                          <div>
-                            <p className="text-xs text-[#808080] font-medium">
-                              KOTs
-                            </p>
-                            <p className="text-sm text-[#121212] font-medium">
-                              1
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="text-xs text-[#808080] font-medium">
-                              Bill No.
-                            </p>
-                            <p className="text-sm text-[#121212] font-medium">
-                              5332
-                            </p>
-                          </div>
-                        </div>
-
-                        <div className="flex flex-col gap-4 pt-4">
-                          <div>
-                            <p className="text-xs text-[#808080] font-medium">
-                              No. of Person
-                            </p>
-                            <p className="text-sm text-[#121212] font-medium">
-                              -
-                            </p>
-                          </div>
-
-                          <div>
-                            <p className="text-xs text-[#808080] font-medium">
-                              Assigned to
-                            </p>
-                            <p className="text-sm text-[#121212] font-medium">
-                              -
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="py-4 px-6 w-full flex items-center justify-between bg-green-100">
-                        <p className="text-sm font-medium text-[#121212]/90">
-                          ${' '}
-                          <span className="text-lg font-bold text-green-600">
-                            105.00
-                          </span>
-                        </p>
-
-                        <button>
-                          <p className="text-sm font-semibold text-[#121212]/90 underline">
-                            View Details
+                      <div className="flex items-center divide-x divide-[#808080]/50 h-full">
+                        <div className="flex flex-col text-start px-4 h-full items-start justify-center flex-shrink-0 bg-gray-100">
+                          <p className="text-xs text-[#808080] font-medium">
+                            Estimated Total
                           </p>
-                        </button>
+                          <p className="text-lg font-bold text-[#121212]">
+                            $105.00
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col text-start px-4 h-full items-start justify-center flex-shrink-0 bg-gray-100">
+                          <p className="text-xs text-[#808080] font-medium">
+                            Total Running Tables
+                          </p>
+                          <p className="text-lg font-bold text-[#121212]">1</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-4 flex flex-wrap gap-5 w-full overflow-x-auto flex-shrink-0">
+                      <div className="h-80 w-80 rounded-lg border border-[#808080]/40 flex flex-col justify-between overflow-hidden">
+                        <div className="py-4 px-6 w-full flex items-center justify-between bg-[#f2f2f2] border-b border-[#808080]/40">
+                          <p className="text-sm font-medium text-[#121212]/90">
+                            Table
+                          </p>
+
+                          <p className="text-sm font-medium text-[#121212]/90">
+                            23 Mins
+                          </p>
+                        </div>
+
+                        <div className="flex flex-col p-4 gap-4 divide-y divide-[#808080]/40">
+                          <div className="grid grid-cols-2">
+                            <div>
+                              <p className="text-xs text-[#808080] font-medium">
+                                KOTs
+                              </p>
+                              <p className="text-sm text-[#121212] font-medium">
+                                1
+                              </p>
+                            </div>
+
+                            <div>
+                              <p className="text-xs text-[#808080] font-medium">
+                                Bill No.
+                              </p>
+                              <p className="text-sm text-[#121212] font-medium">
+                                5332
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="flex flex-col gap-4 pt-4">
+                            <div>
+                              <p className="text-xs text-[#808080] font-medium">
+                                No. of Person
+                              </p>
+                              <p className="text-sm text-[#121212] font-medium">
+                                -
+                              </p>
+                            </div>
+
+                            <div>
+                              <p className="text-xs text-[#808080] font-medium">
+                                Assigned to
+                              </p>
+                              <p className="text-sm text-[#121212] font-medium">
+                                -
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="py-4 px-6 w-full flex items-center justify-between bg-green-100">
+                          <p className="text-sm font-medium text-[#121212]/90">
+                            ${' '}
+                            <span className="text-lg font-bold text-green-600">
+                              105.00
+                            </span>
+                          </p>
+
+                          <button>
+                            <p className="text-sm font-semibold text-[#121212]/90 underline">
+                              View Details
+                            </p>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              )))}
+                )),
+              )}
             </div>
           )}
         </div>

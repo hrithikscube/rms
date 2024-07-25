@@ -1,11 +1,27 @@
+import Breadcrumb from '@/components/Breadcrumb'
 import Layout from '@/components/Layout'
+import Head from 'next/head'
 import React from 'react'
+
+let links = [
+  {
+    name: 'Home',
+    link: '/users/dashboard',
+  },
+  {
+    name: 'Add Head Office',
+    link: '#',
+  },
+]
 
 const AddHeadOffice = () => {
   return (
     <Layout>
-      <div className="w-full h-full flex flex-col items-center justify-center flex-shrink-0">
-        AddHeadOffice
+      <Head>
+        <title>Add Head Office</title>
+      </Head>
+      <div className="w-full h-full flex flex-col flex-shrink-0">
+        <Breadcrumb links={links} />
       </div>
     </Layout>
   )
