@@ -174,7 +174,7 @@ let dummy_data = [
 const Dashboard = () => {
     return (
         <Layout>
-            <div className='w-full h-full flex flex-col flex-shrink-0 bg-[#f2f2f2] pb-5'>
+            <div className='w-full h-full flex flex-col flex-shrink-0  pb-5'>
 
                 <div className='w-full h-14 flex items-center justify-between px-5 bg-white shadow'>
                     <p className='text-sm font-medium text-[#121212]'>Outlet Statistics</p>
@@ -191,23 +191,25 @@ const Dashboard = () => {
 
                     <div className='lg:w-8/12 grid grid-cols-4 gap-5 items-start'>
 
-                        {dashboard_stats.map(item => (
+                        {React.Children.toArray(dashboard_stats.map(item => (
                             <div className='min-h-40 rounded-lg shadow-xl bg-white p-4 flex flex-col items-start justify-between text-start'>
                                 <p className='text-sm text-[#121212] font-medium'>{item?.title}</p>
 
                                 <p className='text-base font-semibold'>{item.value}</p>
                                 <p className='text-xs'>{item.info}</p>
                             </div>
-                        ))}
+                        )))}
 
                     </div>
 
                     <div className='lg:w-4/12 grid gap-5'>
 
-                        {[1, 2].map(item => (
-                            <div className='min-h-40 rounded-lg shadow-xl bg-white'>
-                            </div>
-                        ))}
+                        {React.Children.toArray(
+                            [1, 2].map(item => (
+                                <div className='min-h-40 rounded-lg shadow-xl bg-white'>
+                                </div>
+                            ))
+                        )}
 
                     </div>
 
@@ -220,17 +222,17 @@ const Dashboard = () => {
                     <div className='flex flex-col w-full'>
                         <div className='grid grid-cols-10 bg-white/60 py-3 px-4 border-y border-[#808080]/20'>
                             {
-                                ["Orders", "Sales", "Net Sales", "Tax", "Discount", "Modified", "Re-Printed", "Waived Off", "Round Off", "Charges"]
+                                React.Children.toArray(["Orders", "Sales", "Net Sales", "Tax", "Discount", "Modified", "Re-Printed", "Waived Off", "Round Off", "Charges"]
                                     .map(item => (
                                         <div className='text-xs text-[#121212] font-medium'>
                                             {item}
                                         </div>
-                                    ))
+                                    )))
                             }
                         </div>
 
                         {
-                            dummy_data.map(item => (
+                            React.Children.toArray(dummy_data.map(item => (
                                 <div className='grid grid-cols-10 bg-white py-3 px-4 border-b border-[#808080]/20'>
                                     <div className='text-xs text-[#121212] font-medium'>
                                         {item.orders}
@@ -263,11 +265,8 @@ const Dashboard = () => {
                                         {item.charges}
                                     </div>
                                 </div>
-                            ))
+                            )))
                         }
-
-
-
 
                     </div>
 
@@ -279,17 +278,17 @@ const Dashboard = () => {
                     <div className='flex flex-col w-full'>
                         <div className='grid grid-cols-10 bg-white/60 py-3 px-4 border-y border-[#808080]/20'>
                             {
-                                ["Orders", "Sales", "Net Sales", "Tax", "Discount", "Modified", "Re-Printed", "Waived Off", "Round Off", "Charges"]
+                                React.Children.toArray(["Orders", "Sales", "Net Sales", "Tax", "Discount", "Modified", "Re-Printed", "Waived Off", "Round Off", "Charges"]
                                     .map(item => (
                                         <div className='text-xs text-[#121212] font-medium'>
                                             {item}
                                         </div>
-                                    ))
+                                    )))
                             }
                         </div>
 
                         {
-                            dummy_data.map(item => (
+                            React.Children.toArray(dummy_data.map(item => (
                                 <div className='grid grid-cols-10 bg-white py-3 px-4 border-b border-[#808080]/20'>
                                     <div className='text-xs text-[#121212] font-medium'>
                                         {item.orders}
@@ -322,7 +321,7 @@ const Dashboard = () => {
                                         {item.charges}
                                     </div>
                                 </div>
-                            ))
+                            )))
                         }
 
                     </div>

@@ -87,9 +87,14 @@ const Layout = ({ children }) => {
     return (
         <div className='flex flex-col w-full relative min-h-screen'>
 
-            <div className='h-12 bg-white w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow'>
+            <div className='h-12 bg-white w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between'>
 
                 <h1 className='lg:text-2xl text-xl font-bold italic text-red-600'>HMS</h1>
+
+
+                <button onClick={() => Router.push('/users/login')} className='text-sm underline text-red-600 font-medium'>
+                    Logout
+                </button>
 
             </div>
 
@@ -109,7 +114,7 @@ const Layout = ({ children }) => {
                     </div>
                 </div>
 
-                <div className='ml-60 w-full h-full flex flex-col'>
+                <div className='ml-60 w-full min-h-screen flex flex-col bg-[#f2f2f2]'>
                     {/* {
                         React.Children.toArray([...Array(10)].map(item => (
                             <div className='w-full h-60 bg-red-200 flex-shrink-0'></div>
