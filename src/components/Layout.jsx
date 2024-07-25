@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import React, { useEffect,useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
@@ -85,10 +85,12 @@ const Layout = ({ children }) => {
   useEffect(() => {
     const activeIndex = modules_list.findIndex((item) => item.link === asPath)
     if (activeIndex !== -1 && buttonRefs.current[activeIndex]) {
-      buttonRefs.current[activeIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      })
+      setTimeout(() => {
+        buttonRefs.current[activeIndex].scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        })
+      }, 300) // Delay in milliseconds (e.g., 300ms)
     }
   }, [asPath])
 
