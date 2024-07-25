@@ -10,3 +10,13 @@ const HelpManual = () => {
 }
 
 export default HelpManual
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

@@ -10,3 +10,13 @@ const Reports = () => {
 }
 
 export default Reports
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

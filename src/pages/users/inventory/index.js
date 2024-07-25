@@ -10,3 +10,13 @@ const Inventory = () => {
 }
 
 export default Inventory
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

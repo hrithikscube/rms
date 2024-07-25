@@ -334,3 +334,13 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

@@ -125,3 +125,13 @@ const Login = () => {
 }
 
 export default Login
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

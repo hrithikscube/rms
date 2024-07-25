@@ -1,7 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
 
-
 const Breadcrumb = ({ links }) => {
 
     const Router = useRouter()

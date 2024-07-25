@@ -10,3 +10,13 @@ const BriefcaseDocuments = () => {
 }
 
 export default BriefcaseDocuments
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

@@ -10,3 +10,12 @@ const UserLogs = () => {
 }
 
 export default UserLogs
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }

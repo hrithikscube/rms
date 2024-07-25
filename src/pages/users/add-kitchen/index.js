@@ -10,3 +10,13 @@ const AddKitchen = () => {
 }
 
 export default AddKitchen
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

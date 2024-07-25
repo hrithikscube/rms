@@ -10,3 +10,13 @@ const FranchiseeManagement = () => {
 }
 
 export default FranchiseeManagement
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

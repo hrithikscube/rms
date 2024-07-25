@@ -267,3 +267,13 @@ const OrdersAndBilling = () => {
 }
 
 export default OrdersAndBilling
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

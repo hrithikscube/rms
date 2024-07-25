@@ -10,3 +10,13 @@ const HMSApps = () => {
 }
 
 export default HMSApps
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

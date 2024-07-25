@@ -10,3 +10,12 @@ const UserManagement = () => {
 }
 
 export default UserManagement
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }

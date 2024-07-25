@@ -10,3 +10,13 @@ const MenuAndStore = () => {
 }
 
 export default MenuAndStore
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

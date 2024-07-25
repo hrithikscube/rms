@@ -10,3 +10,13 @@ const DeleteOutlets = () => {
 }
 
 export default DeleteOutlets
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  

@@ -10,3 +10,13 @@ const StoreStatusDashboard = () => {
 }
 
 export default StoreStatusDashboard
+
+export async function getServerSideProps() {
+    let data = {}
+    return {
+      props: {
+        data: data,
+      },
+    }
+  }
+  
