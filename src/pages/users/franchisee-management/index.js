@@ -83,7 +83,7 @@ const FranchiseeManagement = () => {
 
 export default FranchiseeManagement;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {};
   return {
     props: {

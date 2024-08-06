@@ -64,7 +64,7 @@ const MenuAndStore = () => {
 
 export default MenuAndStore
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

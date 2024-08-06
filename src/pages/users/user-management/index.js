@@ -76,7 +76,7 @@ const UserManagement = () => {
 
 export default UserManagement
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

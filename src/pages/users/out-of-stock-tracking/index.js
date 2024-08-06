@@ -198,7 +198,7 @@ const OutOfStockTracking = () => {
 
 export default OutOfStockTracking
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

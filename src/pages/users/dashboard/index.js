@@ -353,7 +353,7 @@ const Dashboard = () => {
 
 export default Dashboard
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

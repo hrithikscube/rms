@@ -88,7 +88,7 @@ const DeleteOutlets = () => {
 
 export default DeleteOutlets
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

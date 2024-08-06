@@ -29,7 +29,7 @@ const UserLogs = () => {
 
 export default UserLogs
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {}
   return {
     props: {

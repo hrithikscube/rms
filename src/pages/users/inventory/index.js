@@ -127,7 +127,7 @@ const Inventory = () => {
 
 export default Inventory;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   let data = {};
   return {
     props: {
