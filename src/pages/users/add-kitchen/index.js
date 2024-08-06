@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import Textarea from '@/components/Textarea';
 import Breadcrumb from '@/components/Breadcrumb';
+import Primarybtn from '@/components/Primarybtn';
+import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
   {
@@ -333,10 +335,8 @@ const AddKitchen = () => {
 
             <div className='flex items-center justify-end gap-4'>
 
-              <button className="p-2 text-xs px-7 rounded-lg border border-[#808080] text-[#121212] font-medium bg-white">Cancel</button>
-
-              <button className="p-2 text-xs px-7 rounded-lg  text-white border bg-red-700 font-medium hover:bg-red-50">Save Changes</button>
-
+              <Secondarybtn label="Cancel" />
+              <Primarybtn label="Save Changes" />
             </div>
 
 
