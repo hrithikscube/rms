@@ -1,9 +1,9 @@
-import Breadcrumb from '@/components/Breadcrumb'
-import Layout from '@/components/Layout'
-import Head from 'next/head'
-import React, { useRef, useState } from 'react'
-import FavoriteCard from './(components)/FavoriteCard'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import Layout from '@/components/Layout';
+import Breadcrumb from '@/components/Breadcrumb';
+import FavoriteCard from './(components)/FavoriteCard';
 
 let links = [
   {

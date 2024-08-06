@@ -1,7 +1,7 @@
-import Breadcrumb from '@/components/Breadcrumb'
-import Layout from '@/components/Layout'
-import Head from 'next/head'
-import React, { useState } from 'react'
+import Head from 'next/head';
+import React, { useState } from 'react';
+import Layout from '@/components/Layout';
+import Breadcrumb from '@/components/Breadcrumb';
 
 let links = [
   {

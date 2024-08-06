@@ -1,6 +1,7 @@
-import { useRouter } from 'next/router'
-import React, { useEffect, useRef } from 'react'
-import Footer from './Footer'
+import Footer from './Footer';
+import { useRouter } from 'next/router';
+import React, { useEffect, useRef } from 'react';
+import Logo from './Logo';
 
 const modules_list = [
   { name: 'Dashboard', link: '/users/dashboard' },
@@ -46,9 +47,10 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col w-full relative min-h-screen">
       <div className="h-12 bg-white w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between">
-        <h1 className="lg:text-2xl text-xl font-bold italic text-red-700">
+        {/* <h1 className="lg:text-2xl text-xl font-bold italic text-red-700">
           RMS
-        </h1>
+        </h1> */}
+        <Logo />
 
         <button
           onClick={() => Router.push('/users/login')}

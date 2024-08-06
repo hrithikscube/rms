@@ -1,9 +1,9 @@
-import Breadcrumb from '@/components/Breadcrumb'
-import Input from '@/components/Input'
-import Layout from '@/components/Layout'
-import Textarea from '@/components/Textarea'
-import Head from 'next/head'
-import React, { useState } from 'react'
+import Head from 'next/head';
+import Input from '@/components/Input';
+import React, { useState } from 'react';
+import Layout from '@/components/Layout';
+import Textarea from '@/components/Textarea';
+import Breadcrumb from '@/components/Breadcrumb';
 
 let links = [
   {

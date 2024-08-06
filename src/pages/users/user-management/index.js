@@ -1,8 +1,7 @@
-import Breadcrumb from '@/components/Breadcrumb'
-import Layout from '@/components/Layout'
-import Head from 'next/head'
-import React, { useState } from 'react'
-import { Fragment } from 'react'
+import React from 'react';
+import Head from 'next/head';
+import Layout from '@/components/Layout';
+import Breadcrumb from '@/components/Breadcrumb';
 
 let links = [
   {
@@ -16,19 +15,7 @@ let links = [
   },
 ]
 
-let category_types = [
-  {
-    name: 'Restaurant Wise',
-    slug: 'restaurant_wise',
-  },
-  {
-    name: 'Aggregator',
-    slug: 'aggregator',
-  },
-]
-
 const UserManagement = () => {
-  const [activeMenu, setActiveMenu] = useState('restaurant_wise')
 
   return (
     <Layout>

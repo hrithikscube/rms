@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Textarea = ({ name, rows, value, handleChange, type, id, width, label }) => {
     return (

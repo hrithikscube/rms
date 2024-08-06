@@ -332,9 +332,6 @@ const AddHeadOffice = () => {
 
                 <Input type="text" name="decision_maker" value={params.decision_maker} handleChange={handleChange} />
               </div>
-
-
-
             </div>
           </div>
 
@@ -348,11 +345,7 @@ const AddHeadOffice = () => {
 
             </div>
 
-
           </div>
-
-
-
         </div>
       </div>
     </Layout>

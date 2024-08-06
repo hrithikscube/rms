@@ -16,14 +16,12 @@ export async function getServerSideProps(context) {
   let isLoggedIn = false
 
   if (isLoggedIn) {
-    // redirect to dashboard
     res.writeHead(301, { Location: "/users/dashboard" });
   } else {
-    // redirect to login
     res.writeHead(301, { Location: "/users/login" });
   }
 
   res.end();
 
-  return { props: {} }; // This will never actually be used because of the redirect
+  return { props: {} };
 }

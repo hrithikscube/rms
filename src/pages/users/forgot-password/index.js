@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import React, { Fragment, useState } from 'react'
+import Logo from '@/components/Logo';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React, { useState } from 'react';
 
 const ForgotPassword = () => {
   const [params, setParams] = useState({
@@ -33,9 +34,10 @@ const ForgotPassword = () => {
         <title>Forgot Password</title>
       </Head>
 
-      <h1 className="lg:text-4xl text-2xl font-bold italic text-red-700">
+      {/* <h1 className="lg:text-4xl text-2xl font-bold italic text-red-700">
         RMS
-      </h1>
+      </h1> */}
+      <Logo />
 
       <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
         <div className="grid lg:grid-cols-2 w-full h-full">
