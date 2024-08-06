@@ -5,7 +5,7 @@ import React from 'react'
 
 let links = [
   {
-    name: 'Home',
+    name: 'Dashboard',
     link: '/users/dashboard',
   },
   {
@@ -44,10 +44,10 @@ const MenuAndStore = () => {
                   <div className="flex flex-row items-start gap-4">
                     <div className="w-10 h-10 bg-gray-200 rounded-full" />
                     <div className="flex flex-col items-start text-start gap-1">
-                      <p className="text-sm font-medium group-hover:text-red-600 text-[#121212]">
+                      <p className="text-sm font-medium group-hover:text-red-700 text-[#121212]">
                         {item}
                       </p>
-                      <p className="text-xs group-hover:text-red-600 text-[#808080]">
+                      <p className="text-xs group-hover:text-red-700 text-[#808080]">
                         Tap to view
                       </p>
                     </div>

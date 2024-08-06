@@ -5,7 +5,7 @@ import React from "react";
 
 let links = [
   {
-    name: "Home",
+    name: "Dashboard",
     link: "/users/dashboard",
   },
   {
@@ -116,7 +116,7 @@ const Inventory = () => {
           </div>
           <div className="flex flex-col w-full h-20 bg-red-50 items-end justify-center px-4">
 
-            <button className="p-2 text-xs px-7 rounded-lg  text-white bg-red-600 font-medium">Save</button>
+            <button className="p-2 text-xs px-7 rounded-lg  text-white bg-red-700 font-medium">Save</button>
 
           </div>
         </div>

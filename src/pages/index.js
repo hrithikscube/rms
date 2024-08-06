@@ -3,9 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='flex flex-col items-center justify-center w-full h-screen'>
-
       <p className='lg:text-base text-sm'>Please wait while we redirect you</p>
-
     </div>
   )
 }

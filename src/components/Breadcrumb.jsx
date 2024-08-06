@@ -13,14 +13,14 @@ const Breadcrumb = ({ links }) => {
                 {
                     React.Children.toArray(
                         links.map((item) => (
-                            <button onClick={() => Router.push(item?.link)} className='text-xs last:text-red-600 text-[#121212]/70 first:pl-0 pl-4 font-semibold'>{item.name}</button>
+                            <button onClick={() => Router.push(item?.link)} className='text-xs last:text-red-700 text-[#121212]/70 first:pl-0 pl-4 font-semibold'>{item.name}</button>
                         ))
                     )
                 }
 
             </div>
 
-            <button className='text-xs hover:text-red-600 text-medium'>
+            <button className='text-xs hover:text-red-700 text-medium'>
                 back
             </button>
 

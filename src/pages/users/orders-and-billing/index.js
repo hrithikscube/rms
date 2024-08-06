@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 
 let links = [
   {
-    name: 'Home',
+    name: 'Dashboard',
     link: '/users/dashboard',
   },
   {
@@ -187,13 +187,12 @@ const OrdersAndBilling = () => {
                   onClick={() => {
                     setActiveMenu(item.slug)
                   }}
-                  className={`h-full px-10 w-fit relative text-center text-sm font-medium ${
-                    activeMenu === item.slug ? 'text-red-600' : 'text-[#121212]'
-                  }`}
+                  className={`h-full px-10 w-fit relative text-center text-sm font-medium ${activeMenu === item.slug ? 'text-red-700' : 'text-[#121212]'
+                    }`}
                 >
                   {item.name}
                   {activeMenu === item.slug && (
-                    <div className="w-full border-2 border-red-600 absolute bottom-0 left-0" />
+                    <div className="w-full border-2 border-red-700 absolute bottom-0 left-0" />
                   )}
                 </button>
               )),

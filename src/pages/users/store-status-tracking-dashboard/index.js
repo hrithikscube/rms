@@ -6,7 +6,7 @@ import { Fragment } from 'react'
 
 let links = [
   {
-    name: 'Home',
+    name: 'Dashboard',
     link: '/users/dashboard',
   },
 
@@ -47,14 +47,13 @@ const StoreStatusTrackingDashboard = () => {
                     onClick={() => {
                       setActiveMenu(item.slug)
                     }}
-                    className={`h-full flex-shrink-0 px-2 relative w-fit text-xs font-semibold ${
-                      activeMenu === item?.slug
-                        ? 'bg-white rounded-full py-1 text-red-600'
-                        : 'text-[#121212]'
-                    }`}
+                    className={`h-full flex-shrink-0 px-2 relative w-fit text-xs font-semibold ${activeMenu === item?.slug
+                      ? 'bg-white rounded-full py-1 text-red-700'
+                      : 'text-[#121212]'
+                      }`}
                   >
                     {item?.name}
-                 
+
                   </button>
                 )),
               )}

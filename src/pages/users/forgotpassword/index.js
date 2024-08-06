@@ -33,8 +33,8 @@ const ForgotPassword = () => {
         <title>Forgot Password</title>
       </Head>
 
-      <h1 className="lg:text-4xl text-2xl font-bold italic text-red-600">
-        HMS
+      <h1 className="lg:text-4xl text-2xl font-bold italic text-red-700">
+        RMS
       </h1>
 
       <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
@@ -63,7 +63,7 @@ const ForgotPassword = () => {
               <div className="flex flex-col w-full gap-2">
                 <button
                   onClick={resetPassword}
-                  className="h-[46px] bg-red-600/90 text-white px-5 rounded w-full text-sm"
+                  className="h-[46px] bg-red-700/90 text-white px-5 rounded w-full text-sm"
                 >
                   Reset Password
                 </button>

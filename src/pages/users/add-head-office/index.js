@@ -5,7 +5,7 @@ import React from 'react'
 
 let links = [
   {
-    name: 'Home',
+    name: 'Dashboard',
     link: '/users/dashboard',
   },
   {

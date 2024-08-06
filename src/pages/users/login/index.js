@@ -35,8 +35,8 @@ const Login = () => {
         <title>Login</title>
       </Head>
 
-      <h1 className="lg:text-4xl text-2xl font-bold italic text-red-600">
-        HMS
+      <h1 className="lg:text-4xl text-2xl font-bold italic text-red-700">
+        RMS
       </h1>
 
       <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
@@ -63,7 +63,7 @@ const Login = () => {
 
                   <button
                     onClick={() => toggleInit(false)}
-                    className="h-[46px] bg-red-600/90 text-white px-5 rounded w-full text-sm"
+                    className="h-[46px] bg-red-700/90 text-white px-5 rounded w-full text-sm"
                   >
                     Submit
                   </button>
@@ -84,7 +84,7 @@ const Login = () => {
 
                       <button
                         onClick={() => toggleInit(true)}
-                        className="text-xs text-red-600/90 font-medium"
+                        className="text-xs text-red-700/90 font-medium"
                       >
                         Change
                       </button>
@@ -111,7 +111,7 @@ const Login = () => {
                       <p className="text-xs font-medium">Rememeber Me</p>
                       <button
                         onClick={() => Router.push('/users/forgotpassword')}
-                        className="text-red-600/90 hover:text-blue-600 text-xs font-medium underline medium"
+                        className="text-red-700/90 hover:text-blue-600 text-xs font-medium underline medium"
                       >
                         Forgot Password
                       </button>
@@ -121,7 +121,7 @@ const Login = () => {
                     onClick={() => {
                       Router.push('/users/dashboard')
                     }}
-                    className="h-[46px] bg-red-600/90 text-white px-5 rounded w-full text-sm"
+                    className="h-[46px] bg-red-700/90 text-white px-5 rounded w-full text-sm"
                   >
                     Sign in
                   </button>

@@ -99,13 +99,13 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col w-full relative min-h-screen">
       <div className="h-12 bg-white w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between">
-        <h1 className="lg:text-2xl text-xl font-bold italic text-red-600">
-          HMS
+        <h1 className="lg:text-2xl text-xl font-bold italic text-red-700">
+          RMS
         </h1>
 
         <button
           onClick={() => Router.push('/users/login')}
-          className="text-sm underline text-red-600 font-medium"
+          className="text-sm underline text-red-700 font-medium"
         >
           Logout
         </button>
@@ -121,11 +121,10 @@ const Layout = ({ children }) => {
                   onClick={() => {
                     Router.push(item.link)
                   }}
-                  className={`h-[46px] w-full px-5 text-xs font-medium text-start ${
-                    item.link === asPath
-                      ? 'text-red-600 bg-red-100'
-                      : 'hover:bg-gray-200 text-[#121212]'
-                  }`}
+                  className={`h-[46px] w-full px-5 text-xs font-medium text-start ${item.link === asPath
+                    ? 'text-red-700 bg-red-100'
+                    : 'hover:bg-gray-200 text-[#121212]'
+                    }`}
                 >
                   {item.name}
                 </button>
