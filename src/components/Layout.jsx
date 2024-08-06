@@ -2,81 +2,28 @@ import { useRouter } from 'next/router'
 import React, { useEffect, useRef } from 'react'
 import Footer from './Footer'
 
+const modules_list = [
+  { name: 'Dashboard', link: '/users/dashboard' },
+  { name: 'Add New HO', link: '/users/add-head-office' },
+  { name: 'Add Kitchen', link: '/users/add-kitchen' },
+  { name: 'Briefcase Documents', link: '/users/briefcase-documents' },
+  { name: 'Create Zone', link: '/users/create-zone' },
+  { name: 'Delete Outlets', link: '/users/delete-outlets' },
+  { name: 'Franchisee Management', link: '/users/franchisee-management' },
+
+  { name: 'Inventory', link: '/users/inventory' },
+  { name: 'Item out-of-stock tracking', link: '/users/out-of-stock-tracking' },
+  { name: 'Help Manual', link: '/users/help-manual' },
+  { name: 'Menu Trigger & Store On / Off', link: '/users/menu-and-store' },
+  { name: 'Orders And Billing', link: '/users/orders-and-billing' },
+  { name: 'User Management', link: '/users/user-management' },
+  { name: 'User Logs', link: '/users/user-logs' },
+  { name: 'Store status tracking dashboard', link: '/users/store-status-tracking-dashboard' },
+  { name: 'Tables', link: '/users/tables' },
+  { name: 'Reports', link: '/users/reports' },
+];
+
 const Layout = ({ children }) => {
-  let modules_list = [
-    {
-      name: 'Dashboard',
-      link: '/users/dashboard',
-    },
-    {
-      name: 'Orders And Billing',
-      link: '/users/orders-and-billing',
-    },
-    {
-      name: 'Tables',
-      link: '/users/tables',
-    },
-    {
-      name: 'Menu Trigger & Store On / Off',
-      link: '/users/menu-and-store',
-    },
-    {
-      name: 'Item out-of-stock tracking',
-      link: '/users/out-of-stock-tracking',
-    },
-    {
-      name: 'Store status tracking dashboard',
-      link: '/users/store-status-tracking-dashboard',
-    },
-    {
-      name: 'Inventory',
-      link: '/users/inventory',
-    },
-    {
-      name: 'Reports',
-      link: '/users/reports',
-    },
-    {
-      name: 'User Management',
-      link: '/users/user-management',
-    },
-    {
-      name: 'Delete Outlets',
-      link: '/users/delete-outlets',
-    },
-    {
-      name: 'Franchisee Management',
-      link: '/users/franchisee-management',
-    },
-    {
-      name: 'Briefcase Documents',
-      link: '/users/briefcase-documents',
-    },
-    {
-      name: 'User Logs',
-      link: '/users/user-logs',
-    },
-    {
-      name: 'Add New HO',
-      link: '/users/add-head-office',
-    },
-    {
-      name: 'Add Kitchen',
-      link: '/users/add-kitchen',
-    },
-    {
-      name: 'Create Zone',
-      link: '/users/create-zone',
-    },
-    {
-      name: 'HMS APPs',
-      link: '/users/hms-apps',
-    },
-    {
-      name: 'Help Manual',
-      link: '/users/help-manual',
-    },
-  ]
 
   const Router = useRouter()
 
@@ -134,11 +81,6 @@ const Layout = ({ children }) => {
         </div>
 
         <div className="ml-60 w-full min-h-screen flex flex-col bg-[#f2f2f2]">
-          {/* {
-                        React.Children.toArray([...Array(10)].map(item => (
-                            <div className='w-full h-60 bg-red-200 flex-shrink-0'></div>
-                        )))
-                    } */}
           {children}
           <Footer />
         </div>

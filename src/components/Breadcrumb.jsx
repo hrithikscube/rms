@@ -20,7 +20,10 @@ const Breadcrumb = ({ links }) => {
 
             </div>
 
-            <button className='text-xs hover:text-red-700 text-medium'>
+            <button
+                onClick={() => {
+                    Router.back()
+                }} className='text-xs text-[#121212] hover:text-red-700 text-medium'>
                 back
             </button>
 

@@ -33,7 +33,7 @@ const StoreStatusTrackingDashboard = () => {
   return (
     <Layout>
       <Head>
-        <title>Store Status Tracking Dashboard</title>
+        <title>Store Status Tracking</title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
