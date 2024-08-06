@@ -190,7 +190,7 @@ const Reports = () => {
 
 export default Reports
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = {}
   return {
     props: {

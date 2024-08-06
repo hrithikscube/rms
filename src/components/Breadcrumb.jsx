@@ -24,7 +24,7 @@ const Breadcrumb = ({ links }) => {
                 onClick={() => {
                     Router.back()
                 }} className='text-xs text-[#121212] hover:text-red-700 text-medium'>
-                back
+                Back
             </button>
 
         </div>

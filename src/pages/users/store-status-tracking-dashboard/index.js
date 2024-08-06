@@ -77,7 +77,7 @@ const StoreStatusTrackingDashboard = () => {
 
 export default StoreStatusTrackingDashboard
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = {}
   return {
     props: {

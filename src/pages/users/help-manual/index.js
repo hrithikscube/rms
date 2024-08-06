@@ -29,7 +29,7 @@ const HelpManual = () => {
 
 export default HelpManual
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = {}
   return {
     props: {

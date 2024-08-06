@@ -346,7 +346,7 @@ const Tables = () => {
 
 export default Tables
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = {}
   return {
     props: {

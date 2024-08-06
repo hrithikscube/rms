@@ -85,7 +85,7 @@ const ForgotPassword = () => {
 
 export default ForgotPassword
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = {}
   return {
     props: {
