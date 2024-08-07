@@ -26,7 +26,7 @@ const FranchiseeManagement = () => {
   return (
     <Layout>
       <Head>
-        <title>Franchisee Management</title>
+        <title>Franchisee Management | RMS </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />

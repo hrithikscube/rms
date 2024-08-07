@@ -22,7 +22,7 @@ const SubOrderType = () => {
     return (
         <Layout>
             <Head>
-                <title>Sub Order Type</title>
+                <title>Sub Order Type | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

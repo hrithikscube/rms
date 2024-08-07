@@ -22,7 +22,7 @@ const DeliveryManagement = () => {
     return (
         <Layout>
             <Head>
-                <title>DeliveryManagement</title>
+                <title>DeliveryManagement | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

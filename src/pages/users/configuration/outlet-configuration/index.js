@@ -22,7 +22,7 @@ const OutletConfiguration = () => {
     return (
         <Layout>
             <Head>
-                <title>Outlet Configuration</title>
+                <title>Outlet Configuration | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

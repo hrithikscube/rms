@@ -22,7 +22,7 @@ const SpecialNote = () => {
     return (
         <Layout>
             <Head>
-                <title>Special Note</title>
+                <title>Special Note | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

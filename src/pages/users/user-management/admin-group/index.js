@@ -22,7 +22,7 @@ const AdminGroupManagement = () => {
     return (
         <Layout>
             <Head>
-                <title>Admin Group Management</title>
+                <title>Admin Group Management | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

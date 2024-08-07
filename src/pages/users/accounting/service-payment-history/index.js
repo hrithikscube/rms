@@ -22,7 +22,7 @@ const ServicePaymentHistory = () => {
     return (
         <Layout>
             <Head>
-                <title>Service Payment History</title>
+                <title>Service Payment History | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

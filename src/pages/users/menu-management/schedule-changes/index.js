@@ -22,7 +22,7 @@ const ScheduleChanges = () => {
     return (
         <Layout>
             <Head>
-                <title>Schedule Changes</title>
+                <title>Schedule Changes | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

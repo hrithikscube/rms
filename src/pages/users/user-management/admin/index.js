@@ -22,7 +22,7 @@ const Admin = () => {
     return (
         <Layout>
             <Head>
-                <title>Admin</title>
+                <title>Admin | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

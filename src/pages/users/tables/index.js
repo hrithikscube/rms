@@ -145,7 +145,7 @@ const Tables = () => {
   return (
     <Layout>
       <Head>
-        <title>Tables</title>
+        <title>Tables | RMS </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />

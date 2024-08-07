@@ -142,7 +142,7 @@ const OutOfStockTracking = () => {
   return (
     <Layout>
       <Head>
-        <title>Out of Stock Tracking</title>
+        <title>Out of Stock Tracking | RMS </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />

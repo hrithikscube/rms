@@ -22,7 +22,7 @@ const Marketing = () => {
     return (
         <Layout>
             <Head>
-                <title>Marketing</title>
+                <title>Marketing | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

@@ -57,7 +57,7 @@ const MenuAndDiscounts = () => {
     return (
         <Layout>
             <Head>
-                <title>Menu and Discounts</title>
+                <title>Menu and Discounts | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

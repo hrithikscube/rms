@@ -22,7 +22,7 @@ const OnlineOrderReconciliation = () => {
     return (
         <Layout>
             <Head>
-                <title>Online Order Reconciliation</title>
+                <title>Online Order Reconciliation | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

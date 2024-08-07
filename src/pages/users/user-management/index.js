@@ -21,7 +21,7 @@ const UserManagement = () => {
   return (
     <Layout>
       <Head>
-        <title>User Management</title>
+        <title>User Management | RMS </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />

@@ -22,7 +22,7 @@ const Notifications = () => {
     return (
         <Layout>
             <Head>
-                <title>Notifications</title>
+                <title>Notifications | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

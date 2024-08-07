@@ -22,7 +22,7 @@ const BillerGroupManagement = () => {
     return (
         <Layout>
             <Head>
-                <title>Biller Group Management</title>
+                <title>Biller Group Management | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

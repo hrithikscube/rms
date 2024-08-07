@@ -31,7 +31,7 @@ const ForgotPassword = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-[#f1f1f1] lg:px-0 px-5 gap-5">
       <Head>
-        <title>Forgot Password</title>
+        <title>Forgot Password | RMS </title>
       </Head>
 
       {/* <h1 className="lg:text-4xl text-2xl font-bold italic text-red-700">
@@ -41,7 +41,9 @@ const ForgotPassword = () => {
 
       <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
         <div className="grid lg:grid-cols-2 w-full h-full">
-          <div className="bg-gradient-to-r from-cyan-300 to-red-300 w-full min-h-[300px] flex-shrink-0"></div>
+          <div className="bg-gradient-to-r from-cyan-300 to-red-300 w-full min-h-[300px] flex-shrink-0 overflow-hidden flex flex-col items-center justify-center">
+            <Logo isIntro />
+          </div>
 
           <div className="flex flex-col py-10 lg:px-16 px-8 gap-4">
             <div className="flex flex-col items-start text-start gap-1">

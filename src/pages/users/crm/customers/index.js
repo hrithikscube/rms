@@ -22,7 +22,7 @@ const Customers = () => {
     return (
         <Layout>
             <Head>
-                <title>Customers</title>
+                <title>Customers | RMS </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
