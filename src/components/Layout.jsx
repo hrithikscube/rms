@@ -490,8 +490,8 @@ const Layout = ({ children }) => {
                         setAllModules(temp)
                       }
                     }}
-                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive && item.sub_modules.length === 0
-                      ? 'text-white bg-blue-600'
+                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive
+                      ? item.sub_modules.length>0?'text-white bg-[#27272A]':'text-white bg-blue-600'
                       : 'text-white'
                       }`}
                   >
