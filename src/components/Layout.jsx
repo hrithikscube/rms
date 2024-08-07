@@ -19,19 +19,26 @@ let modules_list = [
     sub_modules: [
       {
         name: 'All Orders',
-        link: '/users/orders-and-billing/all-orders'
+        link: '/users/orders-and-billing/all-orders',
+        isActive: false,
       },
       {
         name: 'Online Orders',
-        link: '/users/orders-and-billing/online-orders'
+        link: '/users/orders-and-billing/online-orders',
+        isActive: false,
+
       },
       {
         name: 'KOT',
-        link: '/users/orders-and-billing/kot'
+        link: '/users/orders-and-billing/kot',
+        isActive: false,
+
       },
       {
         name: 'Due Payment Settlement',
-        link: '/users/orders-and-billing/due-payment-settlement'
+        link: '/users/orders-and-billing/due-payment-settlement',
+        isActive: false,
+
       }
 
     ]
@@ -43,7 +50,9 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Running Orders',
-        link: '/users/tables/running-orders'
+        link: '/users/tables/running-orders',
+        isActive: false,
+
       }
     ]
   },
@@ -54,23 +63,33 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Menu & Discounts',
-        link: '/users/menu-management/menu-and-discounts'
+        link: '/users/menu-management/menu-and-discounts',
+        isActive: false,
+
       },
       {
         name: 'Online Menu on/off',
-        link: '/users/menu-management/menu-on-off'
+        link: '/users/menu-management/menu-on-off',
+        isActive: false,
+
       },
       {
         name: 'Special Note',
-        link: '/users/menu-management/special-note'
+        link: '/users/menu-management/special-note',
+        isActive: false,
+
       },
       {
         name: 'Set Item Commission',
-        link: '/users/menu-management/set-item-commission'
+        link: '/users/menu-management/set-item-commission',
+        isActive: false,
+
       },
       {
         name: 'Schedule Changes',
-        link: '/users/menu-management/schedule-changes'
+        link: '/users/menu-management/schedule-changes',
+        isActive: false,
+
       },
     ]
   },
@@ -89,19 +108,27 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Marketing',
-        link: '/users/crm/marketing'
+        link: '/users/crm/marketing',
+        isActive: false,
+
       },
       {
         name: 'Customers',
-        link: '/users/crm/customers'
+        link: '/users/crm/customers',
+        isActive: false,
+
       },
       {
         name: 'Campaign',
-        link: '/users/crm/campaign'
+        link: '/users/crm/campaign',
+        isActive: false,
+
       },
       {
         name: 'Feedback',
-        link: '/users/crm/feedback'
+        link: '/users/crm/feedback',
+        isActive: false,
+
       },
     ]
   },
@@ -112,47 +139,69 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Payments',
-        link: '/users/accounting/payments'
+        link: '/users/accounting/payments',
+        isActive: false,
+
       },
       {
         name: 'Online Order Reconciliation',
-        link: '/users/accounting/online-order-reconciliation'
+        link: '/users/accounting/online-order-reconciliation',
+        isActive: false,
+
       },
       {
         name: 'GST Information',
-        link: '/users/accounting/gst-information'
+        link: '/users/accounting/gst-information',
+        isActive: false,
+
       },
       {
         name: 'Bank Details',
-        link: '/users/accounting/bank-details'
+        link: '/users/accounting/bank-details',
+        isActive: false,
+
       },
       {
         name: 'KYC Details',
-        link: '/users/accounting/kyc-details'
+        link: '/users/accounting/kyc-details',
+        isActive: false,
+
       },
       {
         name: 'Utility Bill',
-        link: '/users/accounting/utility-bill'
+        link: '/users/accounting/utility-bill',
+        isActive: false,
+
       },
       {
         name: 'Expenses & Withdrawal',
-        link: '/users/accounting/expenses-and-withdrawal'
+        link: '/users/accounting/expenses-and-withdrawal',
+        isActive: false,
+
       },
       {
         name: 'Service Payment History',
-        link: '/users/accounting/service-payment-history'
+        link: '/users/accounting/service-payment-history',
+        isActive: false,
+
       },
       {
         name: 'Agreement Information',
-        link: '/users/accounting/agreement-information'
+        link: '/users/accounting/agreement-information',
+        isActive: false,
+
       },
       {
         name: 'Loan Information',
-        link: '/users/accounting/loan-information'
+        link: '/users/accounting/loan-information',
+        isActive: false,
+
       },
       {
         name: 'Denomination',
-        link: '/users/accounting/denomination'
+        link: '/users/accounting/denomination',
+        isActive: false,
+
       },
     ]
   },
@@ -163,19 +212,27 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Day End Summary',
-        link: '/users/reports/day-end-summary'
+        link: '/users/reports/day-end-summary',
+        isActive: false,
+
       },
       {
         name: 'Other Reports',
-        link: '/users/reports/other-reports'
+        link: '/users/reports/other-reports',
+        isActive: false,
+
       },
       {
         name: 'Report Notifications',
-        link: '/users/reports/report-notifications'
+        link: '/users/reports/report-notifications',
+        isActive: false,
+
       },
       {
         name: 'Delivery Management',
-        link: '/users/reports/delivery-management'
+        link: '/users/reports/delivery-management',
+        isActive: false,
+
       },
     ]
   },
@@ -186,23 +243,33 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Sub Order Type',
-        link: '/users/configuration/sub-order-type'
+        link: '/users/configuration/sub-order-type',
+        isActive: false,
+
       },
       {
         name: 'Remove Orders',
-        link: '/users/configuration/remove-orders'
+        link: '/users/configuration/remove-orders',
+        isActive: false,
+
       },
       {
         name: 'Delivery Distance',
-        link: '/users/configuration/delivery-distance'
+        link: '/users/configuration/delivery-distance',
+        isActive: false,
+
       },
       {
         name: 'Outlet Configuration',
-        link: '/users/configuration/outlet-configuration'
+        link: '/users/configuration/outlet-configuration',
+        isActive: false,
+
       },
       {
         name: 'Marketplace Settings',
-        link: '/users/configuration/marketplace-settings'
+        link: '/users/configuration/marketplace-settings',
+        isActive: false,
+
       },
     ]
   },
@@ -213,15 +280,21 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Biller Group Management',
-        link: '/users/user-management/biller-group'
+        link: '/users/user-management/biller-group',
+        isActive: false,
+
       },
       {
         name: 'Admin Group Management',
-        link: '/users/user-management/admin-group'
+        link: '/users/user-management/admin-group',
+        isActive: false,
+
       },
       {
         name: 'Admin Management',
-        link: '/users/user-management/admin'
+        link: '/users/user-management/admin',
+        isActive: false,
+
       },
     ]
   },
@@ -246,15 +319,21 @@ let modules_list = [
     sub_modules: [
       {
         name: 'Notifications',
-        link: '/users/user-logs/notifications'
+        link: '/users/user-logs/notifications',
+        isActive: false,
+
       },
       {
         name: 'Menu Trigger Logs',
-        link: '/users/user-logs/menu-trigger-logs'
+        link: '/users/user-logs/menu-trigger-logs',
+        isActive: false,
+
       },
       {
         name: 'Online Store Logs',
-        link: '/users/user-logs/online-store-logs'
+        link: '/users/user-logs/online-store-logs',
+        isActive: false,
+
       },
     ]
   },
@@ -319,7 +398,7 @@ let modules_list = [
 const Layout = ({ children }) => {
 
   const [allModules, setAllModules] = useState(modules_list)
-
+  console.log(allModules, 'allModules')
   const Router = useRouter()
 
   const { asPath } = useRouter()
@@ -341,18 +420,15 @@ const Layout = ({ children }) => {
 
     temp.map((item, index) => {
       if (item.sub_modules.length > 0) {
+
         item.sub_modules.map((child, childIndex) => {
           if (child.link === asPath) {
             temp[index].isActive = true
+            temp[index].sub_modules[childIndex].isActive = true
             setAllModules(temp)
           }
         })
-      }
-      else {
-        if (temp === asPath) {
-          temp[index].isActive = true
-        }
-        setAllModules(temp)
+
       }
     })
 
@@ -395,7 +471,7 @@ const Layout = ({ children }) => {
                         Router.push(item.link)
                       }
                     }}
-                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.link === asPath
+                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.link === asPath || item.sub_modules.length > 0 && item.sub_modules.some(thisItem => thisItem.link === asPath)
                       ? 'text-red-700 bg-red-100'
                       : 'hover:bg-gray-200 text-[#121212]'
                       }`}
