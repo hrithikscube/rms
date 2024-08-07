@@ -1,4 +1,6 @@
+import Input from '@/components/Input';
 import Logo from '@/components/Logo';
+import Primarybtn from '@/components/Primarybtn';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
@@ -38,8 +40,8 @@ const ForgotPassword = () => {
         <Logo />
       </div>
 
-      <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
-        <div className="grid lg:grid-cols-2 w-full h-full">
+      <div className="lg:w-4/12 md:w-8/12 w-full mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+        <div className="grid w-full h-full">
 
           <div className="flex flex-col py-10 lg:px-16 px-8 gap-4">
             <div className="flex flex-col items-start text-start gap-1">
@@ -50,27 +52,23 @@ const ForgotPassword = () => {
               </p>
             </div>
 
-            <div className="flex flex-col items-start w-full lg:gap-6 gap-5">
-              <input
-                placeholder="Enter address or mobile number"
+            <div className="flex flex-col items-start w-full gap-4">
+         
+              <Input
+                label="Enter address or mobile number"
                 type="text"
                 name="username"
                 value={params.username}
-                onChange={handleChange}
-                className="h-[46px] w-full border border-[#808080]/60 rounded text-sm outline-none pl-3"
+                handleChange={handleChange}
               />
 
-              <div className="flex flex-col w-full gap-2">
-                <button
-                  onClick={resetPassword}
-                  className="h-[46px] bg-blue-600 text-white px-5 rounded w-full text-sm"
-                >
-                  Reset Password
-                </button>
+              <div className="flex flex-col w-full">
+               
+                <Primarybtn width="w-full" label="Reset Password" />
 
                 <button
                   onClick={() => Router.push('/users/login')}
-                  className="h-[46px] underline w-full px-5 text-sm text-[#808080] font-medium"
+                  className="h-[46px] underline w-full px-5 text-xs text-[#808080] font-medium"
                 >
                   Sign in
                 </button>

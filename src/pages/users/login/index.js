@@ -9,7 +9,7 @@ const Login = () => {
   const [params, setParams] = useState({
     username: 'hrithik@scube.me',
     password: 'admin123',
-    remember_me: false
+    remember_me: true
   })
 
   const [errors, setErrors] = useState({
@@ -21,7 +21,7 @@ const Login = () => {
     let { name, value, checked } = e.target
     setParams({
       ...params,
-      [name]: name === 'remember_me' ? checked : value,
+      [name]: value
     })
   }
 
@@ -30,6 +30,15 @@ const Login = () => {
   const toggleInit = (value) => {
     setIsInit(value)
   }
+
+  const handleCheckbox = (e) => {
+    let { name, checked } = e.target
+    setParams({
+      ...params,
+      [name]: checked
+    })
+  }
+
 
   const Router = useRouter()
 
@@ -43,7 +52,7 @@ const Login = () => {
         <Logo />
       </div>
 
-      <div className="lg:w-5/12 md:w-8/12 w-full mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
+      <div className="lg:w-4/12 md:w-8/12 w-full mx-auto bg-white shadow-2xl rounded-xl overflow-hidden">
         <div className="grid w-full h-full">
 
           <div className="flex flex-col py-10 lg:px-16 px-8 gap-4">
@@ -55,7 +64,7 @@ const Login = () => {
                 </div>
 
                 <div className="flex flex-col items-start w-full lg:gap-6 gap-5">
-                 
+
                   <Input
                     label="Enter address or mobile number"
                     type="text"
@@ -95,16 +104,7 @@ const Login = () => {
                     <p className="text-xs text-[#808080] font-medium">
                       Password
                     </p>
-                    {/* 
-                    <input
-                      placeholder="Enter here"
-                      type="password"
-                      name="password"
-                      value={params.password}
-                      onChange={handleChange}
-                      className="h-[46px] w-full border border-[#808080]/60 rounded text-sm outline-none pl-3"
-                    /> */}
-
+                   
                     <Input
                       type="password"
                       name="password"
@@ -114,7 +114,7 @@ const Login = () => {
 
                     <div className="flex items-center justify-between w-full mt-2">
                       <div className="flex items-center gap-2">
-                        <input id="remember_me" name="remember_me" value={params.remember_me} type="checkbox" className="w-3 h-3 cursor-pointer" />
+                        <input className='w-3 h-3' id="remember_me" type='checkbox' name="remember_me" value={params.remember_me} onChange={handleCheckbox} />
                         <label htmlFor="remember_me" className="text-xs font-medium select-none cursor-pointer">Rememeber Me</label>
                       </div>
                       <button
@@ -125,14 +125,6 @@ const Login = () => {
                       </button>
                     </div>
                   </div>
-                  {/* <button
-                    onClick={() => {
-                      Router.push('/users/dashboard')
-                    }}
-                    className="h-[46px] bg-blue-600 text-white px-5 rounded w-full text-sm"
-                  >
-                    Sign in
-                  </button> */}
 
                   <Primarybtn onClick={() => Router.push('/users/dashboard')} label="Sign in" width="w-full" />
 
