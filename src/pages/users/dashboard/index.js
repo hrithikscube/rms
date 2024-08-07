@@ -175,7 +175,7 @@ const Dashboard = () => {
   return (
     <Layout>
       <Head>
-        <title>Dashboard </title>
+        <title>Dashboard | RMS </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0  pb-5">
         <div className="w-full h-14 flex items-center justify-between px-5 bg-white shadow">
