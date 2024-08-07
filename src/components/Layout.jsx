@@ -424,36 +424,51 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
 
-    const activeIndex = modules_list.findIndex((item) => item.link === asPath)
-    if (activeIndex !== -1 && buttonRefs.current[activeIndex]) {
-      setTimeout(() => {
-        buttonRefs.current[activeIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-        })
-      }, 300) // Delay in milliseconds (e.g., 300ms)
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      const activeIndex = modules_list.findIndex((item) => item.link === asPath)
+      if (activeIndex !== -1 && buttonRefs.current[activeIndex]) {
+        setTimeout(() => {
+          buttonRefs.current[activeIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+          })
+        }, 300) // Delay in milliseconds (e.g., 300ms)
+      }
     }
 
   }, [asPath])
 
   const buttonRefs = useRef([])
 
+  const [showMenu, setShowMenu] = useState(false)
 
   return (
     <div className="flex flex-col w-full relative min-h-screen">
-      <div className="h-12 bg-[#121212] w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between">
+      <div className="h-12 bg-[#121212] w-full fixed top-0 left-0 z-[10] lg:px-5 px-4 flex items-center shadow justify-between">
         <Logo />
 
         <button
           onClick={() => Router.push('/users/login')}
-          className="text-sm underline text-white font-medium"
+          className="text-sm underline text-white font-medium lg:block hidden"
         >
           Logout
         </button>
+
+        <button
+          onClick={
+            () => {
+              setShowMenu(!showMenu)
+            }
+          }
+          className="lg:hidden block"
+        >
+          <Image width={28} height={28} src="/icons/burger.svg" alt="burger" className="w-7 h-7 invert" />
+        </button>
+
       </div>
 
-      <div className="pt-12 w-full flex flex-row h-full flex-shrink-0 relative ">
-        <div className="w-60 h-full bg-[#121212] flex-shrink-0 overflow-y-auto fixed top-0 pt-12 left-0 shadow z-[9]">
+      <div className="pt-12 w-full flex flex-row h-full flex-shrink-0 relative">
+        <div className={`lg:w-60 ${showMenu ? 'flex' : 'lg:flex hidden'} w-full h-full bg-[#121212] flex-shrink-0 overflow-y-auto fixed top-0 pt-12 left-0 shadow z-[9]`}>
           <div className="flex flex-col w-full">
             {React.Children.toArray(
               allModules.map((item, index) => (
@@ -463,6 +478,7 @@ const Layout = ({ children }) => {
                     onClick={() => {
                       if (item.sub_modules.length === 0) {
                         Router.push(item.link)
+                        setShowMenu(false)
                       }
                       else {
                         let temp = [...modules_list]
@@ -471,7 +487,6 @@ const Layout = ({ children }) => {
                           ...temp[index],
                           isActive: true
                         }
-
                         setAllModules(temp)
                       }
                     }}
@@ -492,7 +507,10 @@ const Layout = ({ children }) => {
                   <div className={`w-full bg-[#27272A] ${item.isActive ? 'block' : 'hidden'}`}>
                     {React.Children.toArray(item.sub_modules.map((child, childIndex) =>
                       <button
-                        onClick={() => Router.push(child.link)}
+                        onClick={() => {
+                          Router.push(child.link)
+                          setShowMenu(false)
+                        }}
                         className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
                           ? 'text-white bg-blue-600'
                           : 'text-white'
@@ -512,7 +530,7 @@ const Layout = ({ children }) => {
           </div>
         </div>
 
-        <div className="ml-60 w-full min-h-screen flex flex-col bg-[#f2f2f2]">
+        <div className="lg:ml-60 w-full min-h-screen flex flex-col bg-[#f2f2f2]">
           {children}
           <Footer />
         </div>

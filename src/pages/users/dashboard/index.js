@@ -177,24 +177,25 @@ const Dashboard = () => {
       <Head>
         <title>Dashboard | RMS </title>
       </Head>
-      <div className="w-full h-full flex flex-col flex-shrink-0  pb-5">
-        <div className="w-full h-14 flex items-center justify-between px-5 bg-white shadow">
+      <div className="w-full lg:h-full flex flex-col flex-shrink-0 lg:pb-5 pb-10">
+
+        <div className="w-full lg:h-14 flex lg:flex-row flex-col lg:gap-0 gap-5 lg:items-center items-start lg:text-center text-start justify-between px-5 bg-white shadow lg:py-0 py-4">
           <p className="text-xs font-medium text-[#121212]">
             Outlet Statistics
           </p>
 
-          <div className="flex items-center gap-5">
+          <div className="lg:flex hidden lg:flex-row flex-col lg:items-center items-start lg:text-center text-start gap-5">
             <p className="text-xs font-medium text-[#121212]">Export Data</p>
             <p className="text-xs font-medium text-[#121212]">Create Zone</p>
             <p className="text-xs font-medium text-[#121212]">Date</p>
           </div>
         </div>
 
-        <div className="lg:p-6 flex flex-row w-full gap-5 items-start">
-          <div className="lg:w-8/12 grid grid-cols-4 gap-5 items-start">
+        <div className="lg:p-6 p-4 flex flex-row w-full gap-5 items-start">
+          <div className="w-full lg:grid lg:grid-cols-4 flex flex-row  lg:gap-5 gap-4 items-start snap-x snap-mandatory overflow-x-auto lg:pb-0 pb-4">
             {React.Children.toArray(
               dashboard_stats.map((item) => (
-                <div className="min-h-40 rounded-lg shadow-xl bg-white p-4 flex flex-col items-start justify-between text-start">
+                <div className="min-h-40 lg:w-full md:w-1/2 w-full flex-shrink-0 snap-center rounded-lg shadow bg-white p-4 flex flex-col items-start justify-between text-start">
                   <p className="text-sm text-[#121212] font-medium">
                     {item?.title}
                   </p>
@@ -206,22 +207,16 @@ const Dashboard = () => {
             )}
           </div>
 
-          <div className="lg:w-4/12 grid gap-5">
-            {React.Children.toArray(
-              [1, 2].map((item) => (
-                <div className="min-h-40 rounded-lg shadow-xl bg-white"></div>
-              )),
-            )}
-          </div>
+          
         </div>
 
-        <div className="flex flex-col gap-4 px-6">
+        <div className="flex flex-col gap-4 lg:px-5 px-4 lg:pb-6 pb-4">
           <h2 className="lg:text-xl text-lg font-semibold">
             Zone Wise Statistics
           </h2>
 
-          <div className="flex flex-col w-full">
-            <div className="grid grid-cols-10 bg-white/60 py-3 px-4 border-y border-[#808080]/20">
+          <div className="flex flex-col w-full overflow-auto flex-shrink-0">
+            <div className="lg:grid lg:grid-cols-10 flex flex-row w-full  ">
               {React.Children.toArray(
                 [
                   'Orders',
@@ -235,7 +230,7 @@ const Dashboard = () => {
                   'Round Off',
                   'Charges',
                 ].map((item) => (
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 bg-white/60  py-3 px-4 border-y border-[#808080]/20">
                     {item}
                   </div>
                 )),
@@ -244,50 +239,51 @@ const Dashboard = () => {
 
             {React.Children.toArray(
               dummy_data.map((item) => (
-                <div className="grid grid-cols-10 bg-white py-3 px-4 border-b border-[#808080]/20">
-                  <div className="text-xs text-[#121212] font-medium">
+                <div className="lg:grid lg:grid-cols-10 flex flex-row w-full  flex-shrink-0">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.orders}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.sales}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.net_sales}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.tax}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.discount}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.modified}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.re_printed}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.waived_off}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.round_off}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.charges}
                   </div>
                 </div>
               )),
             )}
           </div>
+
         </div>
 
-        <div className="flex flex-col gap-4 px-6 pt-6">
+        <div className="flex flex-col gap-4 lg:px-5 px-4">
           <h2 className="lg:text-xl text-lg font-semibold">
-            Outlets Wise Statistics
+            Outlet Wise Statistics
           </h2>
 
-          <div className="flex flex-col w-full">
-            <div className="grid grid-cols-10 bg-white/60 py-3 px-4 border-y border-[#808080]/20">
+          <div className="flex flex-col w-full overflow-auto flex-shrink-0">
+            <div className="lg:grid lg:grid-cols-10 flex flex-row w-full  ">
               {React.Children.toArray(
                 [
                   'Orders',
@@ -301,7 +297,7 @@ const Dashboard = () => {
                   'Round Off',
                   'Charges',
                 ].map((item) => (
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 bg-white/60  py-3 px-4 border-y border-[#808080]/20">
                     {item}
                   </div>
                 )),
@@ -310,41 +306,42 @@ const Dashboard = () => {
 
             {React.Children.toArray(
               dummy_data.map((item) => (
-                <div className="grid grid-cols-10 bg-white py-3 px-4 border-b border-[#808080]/20">
-                  <div className="text-xs text-[#121212] font-medium">
+                <div className="lg:grid lg:grid-cols-10 flex flex-row w-full  flex-shrink-0">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.orders}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.sales}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.net_sales}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.tax}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.discount}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.modified}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.re_printed}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.waived_off}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.round_off}
                   </div>
-                  <div className="text-xs text-[#121212] font-medium">
+                  <div className="text-xs text-[#121212] font-medium lg:w-full w-32 flex-shrink-0 py-3 px-4 bg-white border-b border-[#808080]/20">
                     {item.charges}
                   </div>
                 </div>
               )),
             )}
           </div>
+
         </div>
       </div>
     </Layout>
