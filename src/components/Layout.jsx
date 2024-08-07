@@ -458,8 +458,7 @@ const Layout = ({ children }) => {
               allModules.map((item, index) => (
                 <div className='flex flex-col w-full'>
                   <button
-                    // ref={(el) => (buttonRefs.current[index] = el)}
-
+                    ref={(el) => (buttonRefs.current[index] = el)}
                     onClick={() => {
                       if (item.sub_modules.length === 0) {
                         Router.push(item.link)
@@ -490,7 +489,7 @@ const Layout = ({ children }) => {
                   </button>
 
                   <div className={`w-full bg-slate-100 ${item.isActive ? 'block' : 'hidden'}`}>
-                    {item.sub_modules.map((child, childIndex) =>
+                    {React.Children.toArray(item.sub_modules.map((child, childIndex) =>
                       <button
                         onClick={() => Router.push(child.link)}
                         className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
@@ -503,7 +502,7 @@ const Layout = ({ children }) => {
                           {child.name}
                         </div>
                       </button>
-                    )}
+                    ))}
                   </div>
 
                 </div>
