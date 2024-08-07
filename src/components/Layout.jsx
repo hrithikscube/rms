@@ -398,10 +398,29 @@ let modules_list = [
 const Layout = ({ children }) => {
 
   const [allModules, setAllModules] = useState(modules_list)
-  console.log(allModules, 'allModules')
+
   const Router = useRouter()
 
   const { asPath } = useRouter()
+
+  useEffect(() => {
+    const updateActiveState = (modules) => {
+      return modules.map((module) => {
+        const isActive = module.link === asPath || module.sub_modules.some(sub => sub.link === asPath);
+        const updatedSubModules = module.sub_modules.map((sub) => ({
+          ...sub,
+          isActive: sub.link === asPath,
+        }));
+        return {
+          ...module,
+          isActive,
+          sub_modules: updatedSubModules,
+        };
+      });
+    };
+
+    setAllModules(updateActiveState(modules_list));
+  }, [asPath]);
 
   useEffect(() => {
 
@@ -414,24 +433,6 @@ const Layout = ({ children }) => {
         })
       }, 300) // Delay in milliseconds (e.g., 300ms)
     }
-
-
-    let temp = [...modules_list]
-
-    temp.map((item, index) => {
-      if (item.sub_modules.length > 0) {
-
-        item.sub_modules.map((child, childIndex) => {
-          if (child.link === asPath) {
-            temp[index].isActive = true
-            temp[index].sub_modules[childIndex].isActive = true
-            setAllModules(temp)
-          }
-        })
-
-      }
-    })
-
 
   }, [asPath])
 
@@ -461,17 +462,23 @@ const Layout = ({ children }) => {
                 <div className='flex flex-col w-full'>
                   <button
                     ref={(el) => (buttonRefs.current[index] = el)}
+
                     onClick={() => {
-                      if (item.sub_modules.length > 0) {
-                        let temp = [...modules_list]
-                        temp[index].isActive = !temp[index].isActive
-                        setAllModules(temp)
-                      }
-                      else {
+                      if (item.sub_modules.length === 0) {
                         Router.push(item.link)
                       }
+                      else {
+                        let temp = [...modules_list]
+
+                        temp[index] = {
+                          ...temp[index],
+                          isActive: true
+                        }
+
+                        setAllModules(temp)
+                      }
                     }}
-                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.link === asPath || item.sub_modules.length > 0 && item.sub_modules.some(thisItem => thisItem.link === asPath)
+                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive
                       ? 'text-red-700 bg-red-100'
                       : 'hover:bg-gray-200 text-[#121212]'
                       }`}
@@ -490,16 +497,14 @@ const Layout = ({ children }) => {
                     <div className='w-full bg-slate-100'>
                       {item.sub_modules.map((child, childIndex) =>
                         <button
-                          onClick={() => {
-                            Router.push(child.link)
-                          }}
-                          className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.link === asPath
+                          onClick={() => Router.push(child.link)}
+                          className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
                             ? 'text-red-700 bg-red-100'
                             : 'hover:bg-gray-200 text-[#121212]'
                             }`}
                         >
                           <div className='flex items-center gap-2'>
-                            <div className={`w-2 h-2 ${child.link === asPath ? 'bg-red-700' : 'bg-[#121212]/60'}  rounded-full`} />
+                            <div className={`w-2 h-2 ${child.isActive ? 'bg-red-700' : 'bg-[#121212]/60'}  rounded-full`} />
                             {child.name}
                           </div>
                         </button>
