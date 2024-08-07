@@ -184,8 +184,8 @@ const AllOrders = () => {
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
 
-                <div className="flex flex-col p-5 w-full">
-                    <div className="w-full h-20 bg-white shadow">
+                <div className="flex flex-col p-5 w-full flex-shrink-0">
+                    {/* <div className="w-full h-20 bg-white shadow">
                         {React.Children.toArray(
                             category_types.map((item) => (
                                 <button
@@ -202,10 +202,10 @@ const AllOrders = () => {
                                 </button>
                             )),
                         )}
-                    </div>
+                    </div> */}
 
-                    <div className="flex flex-col w-full pt-5">
-                        <div className="h-20 w-full relative flex items-center justify-start text-start pl-8 bg-blue-50">
+
+                    <div className="h-16 w-full relative flex items-center justify-start text-start pl-8 bg-blue-50 mt-5">
                             <div className="h-full w-2 bg-blue-600 absolute top-0 left-0" />
 
                             <h2 className="lg:text-sm text-xs font-semibold text-[#121212]">
@@ -213,7 +213,9 @@ const AllOrders = () => {
                             </h2>
                         </div>
 
-                        <div className="grid grid-cols-10 bg-white/60 py-3 px-4 border-y border-[#808080]/20">
+                    <div className="flex flex-col w-full overflow-x-auto flex-shrink-0">
+
+                        <div className="lg:grid lg:grid-cols-10 flex flex-row w-full flex-shrink-0 ">
                             {React.Children.toArray(
                                 [
                                     'Order No.',
@@ -227,7 +229,7 @@ const AllOrders = () => {
                                     'AT',
                                     'Actions',
                                 ].map((item) => (
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="lg:w-full w-40 flex-shrink-0 text-xs text-[#121212] font-medium bg-white/60 py-3 px-4 border-y border-[#808080]/20">
                                         {item}
                                     </div>
                                 )),
@@ -236,35 +238,35 @@ const AllOrders = () => {
 
                         {React.Children.toArray(
                             dummy_data.map((item) => (
-                                <div className="grid grid-cols-10 bg-white py-3 px-4 border-b border-[#808080]/20">
-                                    <div className="text-xs text-[#121212] font-medium">
+                                <div className="lg:grid lg:grid-cols-10 flex flex-row w-full flex-shrink-0">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.order_no ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.outlet_name ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.order_type ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.details ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.otp ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.date_time ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.total ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.status ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.at ?? '-'}
                                     </div>
-                                    <div className="text-xs text-[#121212] font-medium">
+                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         {item?.actions ?? '-'}
                                     </div>
                                 </div>
