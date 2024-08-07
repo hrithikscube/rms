@@ -22,7 +22,7 @@ const AggrementInformation = () => {
     return (
         <Layout>
             <Head>
-                <title>Aggrement Information | RMS </title>
+                <title>Aggrement Information </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

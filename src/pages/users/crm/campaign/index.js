@@ -22,7 +22,7 @@ const Campaign = () => {
     return (
         <Layout>
             <Head>
-                <title>Campaign | RMS </title>
+                <title>Campaign </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

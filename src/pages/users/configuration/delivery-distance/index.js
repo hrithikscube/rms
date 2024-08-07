@@ -22,7 +22,7 @@ const DeliveryDistance = () => {
     return (
         <Layout>
             <Head>
-                <title>DeliveryDistance | RMS </title>
+                <title>DeliveryDistance </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

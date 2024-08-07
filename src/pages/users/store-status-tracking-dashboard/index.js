@@ -32,14 +32,14 @@ const StoreStatusTrackingDashboard = () => {
   return (
     <Layout>
       <Head>
-        <title>Store Status Tracking | RMS </title>
+        <title>Store Status Tracking </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
 
         <div className="flex flex-col p-5 w-full">
           <div className="flex flex-col bg-white w-full rounded-lg p-4">
-            <div className="flex items-center w-fit bg-red-100 rounded-full p-1">
+            <div className="flex items-center w-fit bg-blue-100 rounded-full p-1">
               {React.Children.toArray(
                 category_types.map((item) => (
                   <button
@@ -47,7 +47,7 @@ const StoreStatusTrackingDashboard = () => {
                       setActiveMenu(item.slug)
                     }}
                     className={`h-full flex-shrink-0 px-2 relative w-fit text-xs font-semibold ${activeMenu === item?.slug
-                      ? 'bg-white rounded-full py-1 text-red-700'
+                      ? 'bg-white rounded-full py-1 text-blue-600'
                       : 'text-[#121212]'
                       }`}
                   >

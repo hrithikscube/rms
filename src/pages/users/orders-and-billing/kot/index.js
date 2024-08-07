@@ -22,7 +22,7 @@ const KOT = () => {
     return (
         <Layout>
             <Head>
-                <title>KOT | RMS </title>
+                <title>KOT </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

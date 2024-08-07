@@ -22,7 +22,7 @@ const Feedback = () => {
     return (
         <Layout>
             <Head>
-                <title>Feedback | RMS </title>
+                <title>Feedback </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

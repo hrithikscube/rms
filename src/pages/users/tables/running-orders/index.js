@@ -150,7 +150,7 @@ const Tables = () => {
     return (
         <Layout>
             <Head>
-                <title>Running Orders | RMS </title>
+                <title>Running Orders </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
@@ -165,14 +165,14 @@ const Tables = () => {
                                             setActiveMenu(item.slug)
                                         }}
                                         className={`h-full flex-shrink-0 px-10 relative w-fit text-sm font-medium ${activeMenu === item?.slug
-                                            ? 'text-red-700'
+                                            ? 'text-blue-600'
                                             : 'text-[#121212]'
                                             }`}
                                     >
                                         {item?.name}
 
                                         {activeMenu === item.slug && (
-                                            <div className="border border-red-700 absolute bottom-0 left-0 w-full" />
+                                            <div className="border border-blue-600 absolute bottom-0 left-0 w-full" />
                                         )}
                                     </button>
                                 )),

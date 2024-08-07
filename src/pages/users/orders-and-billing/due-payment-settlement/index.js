@@ -22,7 +22,7 @@ const DuePaymentSettlement = () => {
     return (
         <Layout>
             <Head>
-                <title>Due Payment Settlement | RMS </title>
+                <title>Due Payment Settlement </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

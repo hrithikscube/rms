@@ -441,19 +441,19 @@ const Layout = ({ children }) => {
 
   return (
     <div className="flex flex-col w-full relative min-h-screen">
-      <div className="h-12 bg-white w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between">
+      <div className="h-12 bg-[#121212] w-full fixed top-0 left-0 z-[10] px-5 flex items-center shadow justify-between">
         <Logo />
 
         <button
           onClick={() => Router.push('/users/login')}
-          className="text-sm underline text-red-700 font-medium"
+          className="text-sm underline text-white font-medium"
         >
           Logout
         </button>
       </div>
 
-      <div className="pt-12 w-full flex flex-row h-full flex-shrink-0 relative">
-        <div className="w-60 h-full bg-white flex-shrink-0 overflow-y-auto fixed top-0 pt-12 left-0 shadow z-[9]">
+      <div className="pt-12 w-full flex flex-row h-full flex-shrink-0 relative ">
+        <div className="w-60 h-full bg-[#121212] flex-shrink-0 overflow-y-auto fixed top-0 pt-12 left-0 shadow z-[9]">
           <div className="flex flex-col w-full">
             {React.Children.toArray(
               allModules.map((item, index) => (
@@ -475,31 +475,31 @@ const Layout = ({ children }) => {
                         setAllModules(temp)
                       }
                     }}
-                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive
-                      ? 'text-red-700 bg-red-100'
-                      : 'hover:bg-gray-200 text-[#121212]'
+                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive && item.sub_modules.length === 0
+                      ? 'text-white bg-blue-600'
+                      : 'text-white'
                       }`}
                   >
                     {item.name}
 
                     {
                       item.sub_modules.length > 0 && <div className='absolute top-0 right-5 h-full flex flex-col items-center justify-center'>
-                        <Image width={12} height={12} src="/icons/accArrow.svg" alt="accArrow" className={`w-3 h-3 ${item.isActive ? '-rotate-180' : ''}`} />
+                        <Image width={12} height={12} src="/icons/accArrow.svg" alt="accArrow" className={`w-3 h-3 invert ${item.isActive ? '-rotate-180' : ''}`} />
                       </div>
                     }
                   </button>
 
-                  <div className={`w-full bg-slate-100 ${item.isActive ? 'block' : 'hidden'}`}>
+                  <div className={`w-full bg-[#27272A] ${item.isActive ? 'block' : 'hidden'}`}>
                     {React.Children.toArray(item.sub_modules.map((child, childIndex) =>
                       <button
                         onClick={() => Router.push(child.link)}
                         className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
-                          ? 'text-red-700 bg-red-100'
-                          : 'hover:bg-gray-200 text-[#121212]'
+                          ? 'text-white bg-blue-600'
+                          : 'text-white'
                           }`}
                       >
                         <div className='flex items-center gap-2'>
-                          <div className={`w-2 h-2 ${child.isActive ? 'bg-red-700' : 'bg-[#121212]/60'}  rounded-full`} />
+                          <div className={`w-2 h-2 ${child.isActive ? 'bg-white' : 'bg-[#808080]/50'}  rounded-full`} />
                           {child.name}
                         </div>
                       </button>

@@ -22,7 +22,7 @@ const Denomination = () => {
     return (
         <Layout>
             <Head>
-                <title>Denomination | RMS </title>
+                <title>Denomination </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

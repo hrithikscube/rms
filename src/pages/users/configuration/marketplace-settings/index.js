@@ -22,7 +22,7 @@ const MarketplaceSettings = () => {
     return (
         <Layout>
             <Head>
-                <title>MarketplaceSettings | RMS </title>
+                <title>MarketplaceSettings </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

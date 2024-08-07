@@ -8,12 +8,14 @@ const Breadcrumb = ({ links }) => {
     return (
         <div className='h-12 px-5 flex items-center justify-between bg-white'>
 
-            <div className='flex items-center gap-5 divide-x divide-[#808080]/40'>
+            <div className='flex items-center'>
 
                 {
                     React.Children.toArray(
-                        links.map((item) => (
-                            <button onClick={() => Router.push(item?.link)} className='text-xs last:text-red-700 text-[#121212]/70 first:pl-0 pl-4 font-semibold'>{item.name}</button>
+                        links.map((item,index) => (
+                            <button onClick={() => Router.push(item?.link)} className='text-xs last:text-blue-600 text-[#121212]/70 first:pl-0 font-medium'>{item.name}
+                                {index !== links.length-1 && <span className="px-2 text-xs ">/</span>}
+                            </button>
                         ))
                     )
                 }
@@ -23,7 +25,7 @@ const Breadcrumb = ({ links }) => {
             <button
                 onClick={() => {
                     Router.back()
-                }} className='text-xs text-[#121212] hover:text-red-700 text-medium'>
+                }} className='text-xs text-[#121212] hover:text-blue-600 text-medium'>
                 Back
             </button>
 

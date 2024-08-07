@@ -18,7 +18,7 @@ const UserLogs = () => {
   return (
     <Layout>
       <Head>
-        <title>User Logs | RMS </title>
+        <title>User Logs </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />

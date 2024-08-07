@@ -22,7 +22,7 @@ const ExpensesAndWithdrawal = () => {
     return (
         <Layout>
             <Head>
-                <title>Expenses And Withdrawal | RMS </title>
+                <title>Expenses And Withdrawal </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

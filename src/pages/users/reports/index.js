@@ -97,7 +97,7 @@ const Reports = () => {
   return (
     <Layout>
       <Head>
-        <title>Reports | RMS </title>
+        <title>Reports </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
@@ -113,7 +113,7 @@ const Reports = () => {
                     onClick={() => {
                       setFav(item.value)
                     }}
-                    className={`h-[42px] px-3 relative text-start text-xs font-medium ${fav === item.value ? 'text-red-700 bg-red-50' : 'text-[#1212121] hover:bg-[#808080]/10'}`}>
+                    className={`h-[42px] px-3 relative text-start text-xs font-medium ${fav === item.value ? 'text-blue-600 bg-blue-50' : 'text-[#1212121] hover:bg-[#808080]/10'}`}>
                     {item.name}
                   </button>
                 )))

@@ -22,7 +22,7 @@ const RemoveOrders = () => {
     return (
         <Layout>
             <Head>
-                <title>Remove Orders | RMS </title>
+                <title>Remove Orders </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

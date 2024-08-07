@@ -173,13 +173,13 @@ let dummy_data = [
     },
 ]
 
-const OrdersAndBilling = () => {
+const AllOrders = () => {
     const [activeMenu, setActiveMenu] = useState('all')
 
     return (
         <Layout>
             <Head>
-                <title>All Orders | RMS </title>
+                <title>All Orders </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
@@ -192,12 +192,12 @@ const OrdersAndBilling = () => {
                                     onClick={() => {
                                         setActiveMenu(item.slug)
                                     }}
-                                    className={`h-full px-10 w-fit relative text-center text-sm font-medium ${activeMenu === item.slug ? 'text-red-700' : 'text-[#121212]'
+                                    className={`h-full px-10 w-fit relative text-center text-sm font-medium ${activeMenu === item.slug ? 'text-blue-600' : 'text-[#121212]'
                                         }`}
                                 >
                                     {item.name}
                                     {activeMenu === item.slug && (
-                                        <div className="w-full border-2 border-red-700 absolute bottom-0 left-0" />
+                                        <div className="w-full border-2 border-blue-600 absolute bottom-0 left-0" />
                                     )}
                                 </button>
                             )),
@@ -206,7 +206,7 @@ const OrdersAndBilling = () => {
 
                     <div className="flex flex-col w-full pt-5">
                         <div className="h-20 w-full relative flex items-center justify-start text-start pl-8 bg-blue-50">
-                            <div className="h-full w-2 bg-blue-400 absolute top-0 left-0" />
+                            <div className="h-full w-2 bg-blue-600 absolute top-0 left-0" />
 
                             <h2 className="lg:text-sm text-xs font-semibold text-[#121212]">
                                 Last 5 Days Orders
@@ -277,7 +277,7 @@ const OrdersAndBilling = () => {
     )
 }
 
-export default OrdersAndBilling
+export default AllOrders
 
 export async function getServerSideProps() {
     let data = {}

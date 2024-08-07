@@ -57,7 +57,7 @@ const MenuAndDiscounts = () => {
     return (
         <Layout>
             <Head>
-                <title>Menu and Discounts | RMS </title>
+                <title>Menu and Discounts </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
@@ -69,7 +69,7 @@ const MenuAndDiscounts = () => {
                                 onClick={() => {
                                     setActiveMenu(item.value)
                                 }}
-                                className={`text-xs font-semibold text-[#121212] h-full px-12 border-2 rounded-lg ${activeMenu === item.value ? 'bg-white border-blue-500' : 'border-transparent'}`}>{item.name}</button>
+                                className={`text-xs font-semibold text-[#121212] h-full px-12 border-2 rounded-lg ${activeMenu === item.value ? 'bg-white border-blue-600' : 'border-transparent'}`}>{item.name}</button>
                         )))
                     }
 

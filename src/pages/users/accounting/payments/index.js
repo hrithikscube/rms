@@ -22,7 +22,7 @@ const Payments = () => {
     return (
         <Layout>
             <Head>
-                <title>Payments | RMS </title>
+                <title>Payments </title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />

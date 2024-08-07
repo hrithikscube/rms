@@ -73,7 +73,7 @@ const Inventory = () => {
   return (
     <Layout>
       <Head>
-        <title>Inventory | RMS </title>
+        <title>Inventory </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
@@ -116,7 +116,7 @@ const Inventory = () => {
               )))
             }
           </div>
-          <div className="flex flex-col w-full h-20 bg-red-50 items-end justify-center px-4">
+          <div className="flex flex-col w-full h-20 bg-blue-50 items-end justify-center px-4">
 
             <Primarybtn label="Save" />
 

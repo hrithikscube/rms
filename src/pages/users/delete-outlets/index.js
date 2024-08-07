@@ -34,7 +34,7 @@ const DeleteOutlets = () => {
   return (
     <Layout>
       <Head>
-        <title>Delete Outlet | RMS </title>
+        <title>Delete Outlet </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
@@ -56,8 +56,8 @@ const DeleteOutlets = () => {
 
                 {
                   React.Children.toArray(dummy_data.map((item, index) => (
-                    <div className='flex items-center gap-1'>
-                      <input id={item.id} type="checkbox" />
+                    <div className='flex items-center gap-2'>
+                      <input id={item.id} type="checkbox" className="w-3 h-3 cursor-pointer" />
                       <label for={item.id} className='text-xs font-medium select-none cursor-pointer'>{item.name}</label>
                     </div>
                   )))
@@ -68,7 +68,7 @@ const DeleteOutlets = () => {
 
             </div>
 
-            <div className='w-full flex flex-row items-end justify-end p-3 bg-red-50'>
+            <div className='w-full flex flex-row items-end justify-end p-3 bg-blue-50'>
 
               <div className='flex items-center gap-2'>
                 <Secondarybtn label="Cancel" />

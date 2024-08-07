@@ -26,7 +26,7 @@ const FranchiseeManagement = () => {
   return (
     <Layout>
       <Head>
-        <title>Franchisee Management | RMS </title>
+        <title>Franchisee Management </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
@@ -73,7 +73,7 @@ const FranchiseeManagement = () => {
               )))
             }
           </div>
-          <div className="flex flex-col w-full h-12 bg-red-50 items-start justify-center px-4">
+          <div className="flex flex-col w-full h-12 bg-blue-50 items-start justify-center px-4">
 
             <p className="text-[#121212] text-xs font-medium">Showing {dummy_data.length} out of {dummy_data.length} results</p>
 

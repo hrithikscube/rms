@@ -7,6 +7,7 @@ const Login = () => {
   const [params, setParams] = useState({
     username: 'hrithik@scube.me',
     password: 'admin123',
+    remember_me: false
   })
 
   const [errors, setErrors] = useState({
@@ -15,10 +16,10 @@ const Login = () => {
   })
 
   const handleChange = (e) => {
-    let { name, value } = e.target
+    let { name, value, checked } = e.target
     setParams({
       ...params,
-      [name]: value,
+      [name]: name === 'remember_me' ? checked : value,
     })
   }
 
@@ -33,16 +34,15 @@ const Login = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen bg-[#f1f1f1] lg:px-0 px-5 gap-5">
       <Head>
-        <title>Login | RMS </title>
+        <title>Login</title>
       </Head>
 
-      <Logo />
+      <div className="invert">
+        <Logo />
+      </div>
 
-      <div className="lg:w-9/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
-        <div className="grid lg:grid-cols-2 w-full h-full">
-          <div className="bg-gradient-to-r from-cyan-300 to-red-300 w-full min-h-[300px] flex-shrink-0 overflow-hidden flex flex-col items-center justify-center">
-            <Logo isIntro />
-          </div>
+      <div className="lg:w-5/12 w-full mx-auto bg-white shadow-2xl min-h-[300px] rounded-xl overflow-hidden">
+        <div className="grid w-full h-full">
 
           <div className="flex flex-col py-10 lg:px-16 px-8 gap-4">
             {isInit ? (
@@ -64,7 +64,7 @@ const Login = () => {
 
                   <button
                     onClick={() => toggleInit(false)}
-                    className="h-[46px] bg-red-700/90 text-white px-5 rounded w-full text-sm"
+                    className="h-[46px] bg-blue-600 text-white px-5 rounded w-full text-sm"
                   >
                     Submit
                   </button>
@@ -85,7 +85,7 @@ const Login = () => {
 
                       <button
                         onClick={() => toggleInit(true)}
-                        className="text-xs text-red-700/90 font-medium"
+                        className="text-xs text-blue-600 font-medium"
                       >
                         Change
                       </button>
@@ -108,13 +108,16 @@ const Login = () => {
                       className="h-[46px] w-full border border-[#808080]/60 rounded text-sm outline-none pl-3"
                     />
 
-                    <div className="flex items-center justify-between w-full">
-                      <p className="text-xs font-medium">Rememeber Me</p>
+                    <div className="flex items-center justify-between w-full mt-2">
+                      <div className="flex items-center gap-2">
+                        <input id="remember_me" name="remember_me" value={params.remember_me} type="checkbox" className="w-3 h-3 cursor-pointer" />
+                        <label htmlFor="remember_me" className="text-xs font-medium select-none cursor-pointer">Rememeber Me</label>
+                      </div>
                       <button
                         onClick={() => Router.push('/users/forgot-password')}
-                        className="text-red-700/90 hover:text-blue-600 text-xs font-medium underline medium"
+                        className="text-[#121212] hover:text-blue-600 text-xs font-medium underline medium"
                       >
-                        Forgot Password
+                        Forgot Password?
                       </button>
                     </div>
                   </div>
@@ -122,7 +125,7 @@ const Login = () => {
                     onClick={() => {
                       Router.push('/users/dashboard')
                     }}
-                    className="h-[46px] bg-red-700/90 text-white px-5 rounded w-full text-sm"
+                    className="h-[46px] bg-blue-600 text-white px-5 rounded w-full text-sm"
                   >
                     Sign in
                   </button>

@@ -84,7 +84,7 @@ const AddHeadOffice = () => {
   return (
     <Layout>
       <Head>
-        <title>Add Head Office | RMS </title>
+        <title>Add Head Office </title>
       </Head>
       <div className="w-full h-full flex flex-col flex-shrink-0">
         <Breadcrumb links={links} />
@@ -337,7 +337,7 @@ const AddHeadOffice = () => {
             </div>
           </div>
 
-          <div className='w-full bg-red-50 px-5 py-3'>
+          <div className='w-full bg-blue-50 px-5 py-3'>
 
             <div className='flex items-center justify-end gap-4'>
 
