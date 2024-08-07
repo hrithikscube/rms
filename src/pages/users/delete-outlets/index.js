@@ -2,6 +2,8 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
+import Secondarybtn from '@/components/Secondarybtn';
+import Primarybtn from '@/components/Primarybtn';
 
 let links = [
   {
@@ -11,7 +13,7 @@ let links = [
 
   {
     name: 'Delete Outlets',
-    link: '#',
+    link: '',
   },
 ]
 
@@ -69,13 +71,8 @@ const DeleteOutlets = () => {
             <div className='w-full flex flex-row items-end justify-end p-3 bg-red-50'>
 
               <div className='flex items-center gap-2'>
-                <button className='text-red-700 text-xs bg-white border border-[#c0c0c0] py-2 px-6 rounded-md font-medium'>
-                  Cancel
-                </button>
-
-                <button className='text-white text-xs bg-red-700 border border-red-700 py-2 px-6 rounded-md font-medium'>
-                  Delete
-                </button>
+                <Secondarybtn label="Cancel" />
+                <Primarybtn label="Delete" />
               </div>
 
             </div>

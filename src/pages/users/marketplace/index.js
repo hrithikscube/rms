@@ -10,11 +10,11 @@ let links = [
     },
     {
         name: 'User Logs',
-        link: '#',
+        link: '',
     },
     {
         name: 'Marketplace',
-        link: '#',
+        link: '',
     },
 ]
 

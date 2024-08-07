@@ -14,7 +14,7 @@ let links = [
   },
   {
     name: 'Add Central Kitchen',
-    link: '#',
+    link: '',
   },
 ]
 

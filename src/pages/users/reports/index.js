@@ -12,7 +12,7 @@ let links = [
   },
   {
     name: 'Reports',
-    link: '#',
+    link: '',
   },
 ]
 

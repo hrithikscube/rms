@@ -10,11 +10,11 @@ let links = [
     },
     {
         name: 'Menu Management',
-        link: '#',
+        link: '',
     },
     {
         name: 'Menu and Discounts',
-        link: '#',
+        link: '',
     },
 ]
 

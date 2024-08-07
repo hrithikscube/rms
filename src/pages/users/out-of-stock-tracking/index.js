@@ -12,7 +12,7 @@ let links = [
 
   {
     name: 'Item out-of-stock-tracking',
-    link: '#',
+    link: '',
   },
 ]
 

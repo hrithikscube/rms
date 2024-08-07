@@ -2,6 +2,8 @@ import React from "react";
 import Head from "next/head";
 import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
+import Secondarybtn from "@/components/Secondarybtn";
+import Ternarybtn from "@/components/Ternarybtn";
 
 let links = [
   {
@@ -34,8 +36,9 @@ const FranchiseeManagement = () => {
             <input placeholder="Name" className="p-2 text-xs px-3 outline-none bg-white border border-[#808080]/40 rounded-lg" />
             <input placeholder="Ref id" className="p-2 text-xs px-3 outline-none bg-white border border-[#808080]/40 rounded-lg" />
 
-            <button className="p-2 text-xs px-5 rounded-lg  bg-white text-red-700 border border-red-700 font-medium hover:bg-red-50">Search</button>
-            <button className="p-2 text-xs px-5 rounded-lg border border-[#C0C0C0] text-[#121212] font-medium hover:bg-gray-50">Show All</button>
+            <Ternarybtn label="Search" />
+            <Secondarybtn label="Show All" />
+
 
           </div>
           <div className="flex flex-col h-12 w-full px-5 bg-gray-200">
@@ -63,7 +66,7 @@ const FranchiseeManagement = () => {
                   <p className="text-xs text-[#121212]">{item?.outlet}</p>
                   <p className="text-xs text-[#121212]">{item?.ref_id}</p>
                   <div>
-                    <button className="p-2 text-xs px-7 rounded-lg  bg-white text-red-700 border border-red-700 font-medium hover:bg-red-50">Lock</button>
+                    <Ternarybtn label="Lock" />
                   </div>
 
                 </div>

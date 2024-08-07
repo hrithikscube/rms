@@ -10,11 +10,11 @@ let links = [
     },
     {
         name: 'Configuration',
-        link: '#',
+        link: '',
     },
     {
         name: 'Outlet Configuration',
-        link: '#',
+        link: '',
     },
 ]
 

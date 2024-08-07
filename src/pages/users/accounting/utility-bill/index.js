@@ -10,11 +10,11 @@ let links = [
     },
     {
         name: 'Accounting',
-        link: '#',
+        link: '',
     },
     {
         name: 'Utility Bill',
-        link: '#',
+        link: '',
     },
 ]
 

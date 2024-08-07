@@ -11,7 +11,7 @@ let links = [
 
   {
     name: 'Store Status Tracking Dashboard',
-    link: '#',
+    link: '',
   },
 ]
 

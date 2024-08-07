@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
+import Primarybtn from '@/components/Primarybtn';
 
 let links = [
   {
@@ -11,7 +12,7 @@ let links = [
 
   {
     name: 'User Management',
-    link: '#',
+    link: '',
   },
 ]
 
@@ -30,9 +31,7 @@ const UserManagement = () => {
 
             <div className='w-full flex flex-row items-end justify-end p-3'>
 
-              <button className='text-white text-xs bg-red-700 py-2 px-6 rounded-md font-medium'>
-                Add
-              </button>
+              <Primarybtn label="Add" />
 
             </div>
 
