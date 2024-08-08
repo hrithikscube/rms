@@ -259,7 +259,7 @@ const AllOrders = () => {
                             <div className='flex flex-col h-40 w-full lg:p-5 px-4 bg-white border-t border-[#808080]/20'>
                                 <div className='w-full flex flex-row flex-wrap gap-4'>
                                     {
-                                        filterInputs.map((item) =>
+                                        React.Children.toArray(filterInputs.map((item) =>
                                             <Input
                                                 type={item.type}
                                                 name={item.name}
@@ -267,7 +267,7 @@ const AllOrders = () => {
                                                 handleChange={item.handleChange}
                                                 label={item.label}
                                             />
-                                        )
+                                        ))
                                     }
                                 </div>
                             </div> : ''
