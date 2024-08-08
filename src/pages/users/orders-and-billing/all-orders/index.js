@@ -3,6 +3,8 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
+import Image from 'next/image';
+import Input from '@/components/Input';
 
 let links = [
     {
@@ -174,7 +176,51 @@ let dummy_data = [
 ]
 
 const AllOrders = () => {
-    const [activeMenu, setActiveMenu] = useState('all')
+    const [showFilters, setShowFilter] = useState(false)
+
+    const [params, setParams] = useState({
+        start_date: '',
+        end_date: '',
+        order_id: '',
+        customer_name: '',
+        customer_phone: '',
+        order_type: '',
+        sub_order_type: '',
+        payment_type: '',
+        order_status: '',
+        other_staus: '',
+        grand_total: '',
+        gstin: '',
+    })
+
+    const handleChange = (e) => {
+        let { name, value } = e.target
+        setParams({
+            ...params,
+            [name]: value
+        })
+    }
+
+    const toggleFilters = () => {
+        setShowFilter(!showFilters)
+    }
+
+    const filterInputs = [
+        {
+            name: 'start_date',
+            type: 'text',
+            value: params.start_date,
+            handleChange: handleChange,
+            label: 'Start Date'
+        },
+        {
+            name: 'end_date',
+            type: 'text',
+            value: params.end_date,
+            handleChange: handleChange,
+            label: 'End Date'
+        },
+    ]
 
     return (
         <Layout>
@@ -185,33 +231,47 @@ const AllOrders = () => {
                 <Breadcrumb links={links} />
 
                 <div className="flex flex-col p-5 w-full flex-shrink-0">
-                    {/* <div className="w-full h-20 bg-white shadow">
-                        {React.Children.toArray(
-                            category_types.map((item) => (
-                                <button
-                                    onClick={() => {
-                                        setActiveMenu(item.slug)
-                                    }}
-                                    className={`h-full px-10 w-fit relative text-center text-sm font-medium ${activeMenu === item.slug ? 'text-blue-600' : 'text-[#121212]'
-                                        }`}
-                                >
-                                    {item.name}
-                                    {activeMenu === item.slug && (
-                                        <div className="w-full border-2 border-blue-600 absolute bottom-0 left-0" />
-                                    )}
-                                </button>
-                            )),
-                        )}
-                    </div> */}
-
 
                     <div className="h-16 w-full relative flex items-center justify-start text-start pl-8 bg-blue-50 mt-5">
-                            <div className="h-full w-2 bg-blue-600 absolute top-0 left-0" />
+                        <div className="h-full w-2 bg-blue-600 absolute top-0 left-0" />
 
-                            <h2 className="lg:text-sm text-xs font-semibold text-[#121212]">
-                                Last 5 Days Orders
-                            </h2>
+                        <h2 className="lg:text-sm text-xs font-semibold text-[#121212]">
+                            Last 5 Days Orders
+                        </h2>
+                    </div>
+
+                    <button onClick={toggleFilters} className='bg-white w-full flex flex-col lg:px-5 px-4'>
+
+                        <div className='w-full flex items-center justify-between h-16'>
+                            <div className='flex items-center gap-2'>
+                                <Image src="/icons/search.svg" alt="search" width={16} height={16} />
+                                <p className='text-xs font-semibold text-[#121212]'>Search</p>
+                            </div>
+
+                            <Image src="/icons/accArrow.svg" alt="search" width={10} height={10} />
+
                         </div>
+
+                    </button>
+
+                    {
+                        showFilters ?
+                            <div className='flex flex-col h-40 w-full lg:p-5 px-4 bg-white border-t border-[#808080]/20'>
+                                <div className='w-full flex flex-row flex-wrap gap-4'>
+                                    {
+                                        filterInputs.map((item) =>
+                                            <Input
+                                                type={item.type}
+                                                name={item.name}
+                                                value={item.value}
+                                                handleChange={item.handleChange}
+                                                label={item.label}
+                                            />
+                                        )
+                                    }
+                                </div>
+                            </div> : ''
+                    }
 
                     <div className="flex flex-col w-full overflow-x-auto flex-shrink-0">
 

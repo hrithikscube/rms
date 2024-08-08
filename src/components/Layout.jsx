@@ -443,16 +443,43 @@ const Layout = ({ children }) => {
 
   const [showMenu, setShowMenu] = useState(false)
 
+  const [lmenu, setLMenu] = useState(false)
+
   return (
     <div className="flex flex-col w-full relative min-h-screen">
       <div className="h-12 bg-[#121212] w-full fixed top-0 left-0 z-[10] lg:px-5 px-4 flex items-center shadow justify-between">
         <Logo />
 
         <button
-          onClick={() => Router.push('/users/login')}
-          className="text-sm underline text-white font-medium lg:block hidden"
+          onClick={() => {
+            setLMenu(!lmenu)
+          }}
+          className="text-sm text-white font-medium lg:block hidden relative"
         >
-          Logout
+          <div className='w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-[#121212]'>
+            A
+          </div>
+
+          {
+            lmenu && <div className='w-40 bg-[#f2f2f2] absolute top-10 shadow-lg right-0 overflow-hidden'>
+
+              {
+                React.Children.toArray(["Edit Profile", "Logout"].map(item => (
+                  <button
+                    onClick={() => {
+                      if (item === 'Logout') {
+                        Router.push('/users/login')
+                      }
+                      setLMenu(false)
+                    }}
+                    className='text-xs py-2 text-[#121212] hover:bg-blue-500 hover:text-white w-full text-start px-3'>
+                    <p>{item}</p>
+                  </button>
+                )))
+              }
+
+            </div>
+          }
         </button>
 
         <button
