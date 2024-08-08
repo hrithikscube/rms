@@ -403,22 +403,23 @@ const Layout = ({ children }) => {
 
   const { asPath } = useRouter()
 
-  useEffect(() => {
-    const updateActiveState = (modules) => {
-      return modules.map((module) => {
-        const isActive = module.link === asPath || module.sub_modules.some(sub => sub.link === asPath);
-        const updatedSubModules = module.sub_modules.map((sub) => ({
-          ...sub,
-          isActive: sub.link === asPath,
-        }));
-        return {
-          ...module,
-          isActive,
-          sub_modules: updatedSubModules,
-        };
-      });
-    };
+  const updateActiveState = (modules) => {
+    return modules.map((module) => {
+      const isActive = module.link === asPath || module.sub_modules.some(sub => sub.link === asPath);
+      const updatedSubModules = module.sub_modules.map((sub) => ({
+        ...sub,
+        isActive: sub.link === asPath,
 
+      }));
+      return {
+        ...module,
+        isActive,
+        sub_modules: updatedSubModules,
+      };
+    });
+  };
+
+  useEffect(() => {
     setAllModules(updateActiveState(modules_list));
   }, [asPath]);
 
@@ -476,22 +477,23 @@ const Layout = ({ children }) => {
                   <button
                     ref={(el) => (buttonRefs.current[index] = el)}
                     onClick={() => {
-                      if (item.sub_modules.length === 0) {
-                        Router.push(item.link)
-                        setShowMenu(false)
-                      }
-                      else {
-                        let temp = [...modules_list]
-
-                        temp[index] = {
-                          ...temp[index],
-                          isActive: true
+                      if (!item.isActive) {
+                        if (item.sub_modules.length > 0) {
+                          let temp = [...modules_list]
+                          temp[index] = {
+                            ...temp[index],
+                            isActive: true
+                          }
+                          setAllModules(temp)
                         }
-                        setAllModules(temp)
+                        else {
+                          Router.push(item.link)
+                          setShowMenu(false)
+                        }
                       }
                     }}
                     className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive
-                      ? item.sub_modules.length>0?'text-white bg-[#27272A]':'text-white bg-blue-600'
+                      ? item.sub_modules.length > 0 ? 'text-white bg-[#27272A]' : 'text-white bg-blue-600'
                       : 'text-white'
                       }`}
                   >
