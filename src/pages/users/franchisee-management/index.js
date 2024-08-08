@@ -1,9 +1,8 @@
-import React from "react";
 import Head from "next/head";
-import Layout from "@/components/Layout";
+import React, { Fragment } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
-import Secondarybtn from "@/components/Secondarybtn";
 import Ternarybtn from "@/components/Ternarybtn";
+import Secondarybtn from "@/components/Secondarybtn";
 
 let links = [
   {
@@ -24,7 +23,7 @@ const dummy_data = Array.from({ length: 5 }, (v, i) => ({
 
 const FranchiseeManagement = () => {
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Franchisee Management </title>
       </Head>
@@ -80,7 +79,7 @@ const FranchiseeManagement = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   );
 };
 

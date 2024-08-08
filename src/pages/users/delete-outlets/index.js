@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
 import Head from 'next/head';
-import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
-import Secondarybtn from '@/components/Secondarybtn';
 import Primarybtn from '@/components/Primarybtn';
+import React, { Fragment, useState } from 'react';
+import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
   {
@@ -54,7 +53,7 @@ const DeleteOutlets = () => {
   }
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Delete Outlet </title>
       </Head>
@@ -111,7 +110,7 @@ const DeleteOutlets = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

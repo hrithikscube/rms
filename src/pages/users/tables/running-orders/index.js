@@ -1,8 +1,8 @@
 
 
 import Head from 'next/head';
-import { Fragment } from 'react';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import Secondarybtn from '@/components/Secondarybtn';
@@ -149,7 +149,7 @@ const Tables = () => {
     const [activeMenu, setActiveMenu] = useState('running_orders')
 
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>Running Orders </title>
             </Head>
@@ -351,7 +351,7 @@ const Tables = () => {
                     )}
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     )
 }
 

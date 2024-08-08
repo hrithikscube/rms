@@ -1,9 +1,8 @@
-import React from "react";
 import Head from "next/head";
-import Layout from "@/components/Layout";
+import React, { Fragment } from 'react';
 import Breadcrumb from "@/components/Breadcrumb";
-import Secondarybtn from "@/components/Secondarybtn";
 import Primarybtn from "@/components/Primarybtn";
+import Secondarybtn from "@/components/Secondarybtn";
 
 let links = [
     {
@@ -75,7 +74,7 @@ let dummy_data = [
 
 const InventoryDashboard = () => {
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>Inventory Dashboard</title>
             </Head>
@@ -127,7 +126,7 @@ const InventoryDashboard = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     );
 };
 

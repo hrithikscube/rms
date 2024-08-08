@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -30,7 +31,7 @@ const StoreStatusTrackingDashboard = () => {
   const [activeMenu, setActiveMenu] = useState('restaurant_wise')
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Store Status Tracking </title>
       </Head>
@@ -70,7 +71,7 @@ const StoreStatusTrackingDashboard = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

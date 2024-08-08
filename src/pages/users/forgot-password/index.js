@@ -1,9 +1,10 @@
-import Input from '@/components/Input';
-import Logo from '@/components/Logo';
-import Primarybtn from '@/components/Primarybtn';
 import Head from 'next/head';
+import Logo from '@/components/Logo';
+import Input from '@/components/Input';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import Primarybtn from '@/components/Primarybtn';
+import React, { Fragment,useState } from 'react';
+
 
 const ForgotPassword = () => {
   const [params, setParams] = useState({

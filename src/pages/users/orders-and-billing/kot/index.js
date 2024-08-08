@@ -2,7 +2,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Input from '@/components/Input';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Ternarybtn from '@/components/Ternarybtn';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -233,7 +234,7 @@ const KOT = () => {
     ]
 
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>KOT</title>
             </Head>
@@ -355,7 +356,7 @@ const KOT = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     )
 }
 

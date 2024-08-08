@@ -1,10 +1,9 @@
 import Head from 'next/head';
 import Input from '@/components/Input';
-import React, { useState } from 'react';
-import Layout from '@/components/Layout';
 import Textarea from '@/components/Textarea';
 import Breadcrumb from '@/components/Breadcrumb';
 import Primarybtn from '@/components/Primarybtn';
+import React, { Fragment, useState } from 'react';
 import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
@@ -81,7 +80,7 @@ const AddKitchen = () => {
   }
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Add Kitchen </title>
       </Head>
@@ -346,7 +345,7 @@ const AddKitchen = () => {
 
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+;
 
 const Textarea = ({ name, rows, value, handleChange, type, id, width, label }) => {
     return (

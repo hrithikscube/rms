@@ -1,5 +1,6 @@
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -35,7 +36,7 @@ const DuePaymentSettlement = () => {
     }
 
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>Due Payment Settlement </title>
             </Head>
@@ -61,7 +62,7 @@ const DuePaymentSettlement = () => {
 
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     )
 }
 

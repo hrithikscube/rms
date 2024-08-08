@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+
 import { Dancing_Script } from 'next/font/google'
 
 const dancing_font = Dancing_Script({ subsets: ["latin"] });

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from 'react';
 import Head from "next/head";
-import Layout from "@/components/Layout";
 import Breadcrumb from "@/components/Breadcrumb";
 import Secondarybtn from "@/components/Secondarybtn";
 import Primarybtn from "@/components/Primarybtn";
@@ -71,7 +70,7 @@ let dummy_data = [
 
 const Inventory = () => {
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Inventory </title>
       </Head>
@@ -123,7 +122,7 @@ const Inventory = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   );
 };
 

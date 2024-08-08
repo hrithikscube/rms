@@ -1,6 +1,7 @@
 
 import Head from 'next/head';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import Image from 'next/image';
@@ -200,7 +201,7 @@ const OnlineMenuOnOff = () => {
     ]
 
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>Online Menu on/off </title>
             </Head>
@@ -316,7 +317,7 @@ const OnlineMenuOnOff = () => {
                     </div>
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     )
 }
 

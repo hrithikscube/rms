@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import FavoriteCard from './(components)/FavoriteCard';
@@ -95,7 +96,7 @@ const Reports = () => {
   }
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Reports </title>
       </Head>
@@ -184,7 +185,7 @@ const Reports = () => {
       </div>
 
 
-    </Layout>
+    </Fragment>
   )
 }
 

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { Fragment,useState } from 'react';
+
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -55,7 +56,7 @@ const MenuAndDiscounts = () => {
     const [activeMenu, setActiveMenu] = useState('Categories')
 
     return (
-        <Layout>
+        <Fragment>
             <Head>
                 <title>Menu and Discounts </title>
             </Head>
@@ -75,7 +76,7 @@ const MenuAndDiscounts = () => {
 
                 </div>
             </div>
-        </Layout>
+        </Fragment>
     )
 }
 

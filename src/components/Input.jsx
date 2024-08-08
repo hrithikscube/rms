@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+;
 
 const Input = ({ name, value, handleChange, type, id, width, label }) => {
     return (

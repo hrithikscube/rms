@@ -1,6 +1,6 @@
 import Footer from './Footer';
 import { useRouter } from 'next/router';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import Logo from './Logo';
 import Image from 'next/image';
 
@@ -476,27 +476,18 @@ const Layout = ({ children }) => {
     setAllModules(updateActiveState(modules_list));
   }, [asPath]);
 
-  useEffect(() => {
-
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
-      const activeIndex = modules_list.findIndex((item) => item.link === asPath)
-      if (activeIndex !== -1 && buttonRefs.current[activeIndex]) {
-        setTimeout(() => {
-          buttonRefs.current[activeIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-          })
-        }, 300) // Delay in milliseconds (e.g., 300ms)
-      }
-    }
-
-  }, [asPath])
-
-  const buttonRefs = useRef([])
-
   const [showMenu, setShowMenu] = useState(false)
 
   const [lmenu, setLMenu] = useState(false)
+
+  if (asPath === '/users/login' || asPath === '/users/forgot-password' || asPath === '/') {
+    return (
+      <Fragment>
+        {children}
+      </Fragment>
+    )
+  }
+
 
   return (
     <div className="flex flex-col w-full relative min-h-screen">
@@ -566,7 +557,6 @@ const Layout = ({ children }) => {
               allModules.map((item, index) => (
                 <div className='flex flex-col w-full'>
                   <button
-                    ref={(el) => (buttonRefs.current[index] = el)}
                     onClick={() => {
                       if (!item.isActive) {
                         if (item.sub_modules.length > 0) {
@@ -597,12 +587,12 @@ const Layout = ({ children }) => {
                     }
                   </button>
 
-                  <div className={`w-full bg-[#27272A] ${item.isActive ? 'block' : 'hidden'}`}>
+                  <div className={`w-full bg-[#27272A] ${item.isActive ? 'flex flex-col' : 'hidden'}`}>
                     {React.Children.toArray(item.sub_modules.map((child, childIndex) =>
                       <button
                         onClick={() => {
                           Router.push(child.link)
-                          setShowMenu(false)
+                          // setShowMenu(false)
                         }}
                         className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
                           ? 'text-white bg-blue-600'
@@ -632,4 +622,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default React.memo(Layout)

@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Input from '@/components/Input';
-import React, { useState } from 'react';
-import Layout from '@/components/Layout';
 import Textarea from '@/components/Textarea';
 import Breadcrumb from '@/components/Breadcrumb';
-import Secondarybtn from '@/components/Secondarybtn';
 import Primarybtn from '@/components/Primarybtn';
+import React, { Fragment, useState } from 'react';
+import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
   {
@@ -82,7 +81,7 @@ const AddHeadOffice = () => {
   }
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Add Head Office </title>
       </Head>
@@ -348,7 +347,7 @@ const AddHeadOffice = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

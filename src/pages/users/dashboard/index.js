@@ -1,6 +1,5 @@
-import React from 'react';
 import Head from 'next/head';
-import Layout from '@/components/Layout';
+import React, { Fragment } from 'react';
 
 let dashboard_stats = [
   {
@@ -173,7 +172,7 @@ let dummy_data = [
 
 const Dashboard = () => {
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Dashboard | RMS </title>
       </Head>
@@ -344,7 +343,7 @@ const Dashboard = () => {
 
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

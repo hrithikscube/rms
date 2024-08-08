@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { Fragment } from 'react';
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
+
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 
@@ -140,7 +140,7 @@ const OutOfStockTracking = () => {
   const [activeMenu, setActiveMenu] = useState('items')
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>Out of Stock Tracking </title>
       </Head>
@@ -192,7 +192,7 @@ const OutOfStockTracking = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 

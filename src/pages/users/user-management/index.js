@@ -1,6 +1,5 @@
-import React from 'react';
 import Head from 'next/head';
-import Layout from '@/components/Layout';
+import React, { Fragment } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import Primarybtn from '@/components/Primarybtn';
 
@@ -19,7 +18,7 @@ let links = [
 const UserManagement = () => {
 
   return (
-    <Layout>
+    <Fragment>
       <Head>
         <title>User Management </title>
       </Head>
@@ -56,7 +55,7 @@ const UserManagement = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Fragment>
   )
 }
 
