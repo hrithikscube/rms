@@ -89,7 +89,6 @@ let modules_list = [
         name: 'Schedule Changes',
         link: '/users/menu-management/schedule-changes',
         isActive: false,
-
       },
     ]
   },
@@ -98,7 +97,61 @@ let modules_list = [
     link: '/users/inventory',
     isActive: false,
     sub_modules: [
-
+      {
+        name: 'Inventory Dashboard',
+        link: '/users/inventory/inventory-dashboard',
+        isActive: false,
+      },
+      {
+        name: 'Raw Materials',
+        link: '/users/inventory/raw-materials',
+        isActive: false,
+      },
+      {
+        name: 'Item Recipes',
+        link: '/users/inventory/item-recipes',
+        isActive: false,
+      },
+      {
+        name: 'Closing Stock',
+        link: '/users/inventory/closing-stock',
+        isActive: false,
+      },
+      {
+        name: 'Suppliers',
+        link: '/users/inventory/suppliers',
+        isActive: false,
+      },
+      {
+        name: 'Purchase',
+        link: '/users/inventory/purchase',
+        isActive: false,
+      },
+      {
+        name: 'Consumption',
+        link: '/users/inventory/consumption',
+        isActive: false,
+      },
+      {
+        name: 'Conversion',
+        link: '/users/inventory/conversion',
+        isActive: false,
+      },
+      {
+        name: 'Report',
+        link: '/users/inventory/report',
+        isActive: false,
+      },
+      {
+        name: 'Units',
+        link: '/users/inventory/units',
+        isActive: false,
+      },
+      {
+        name: 'Inventory Settings',
+        link: '/users/inventory/settings',
+        isActive: false,
+      },
     ]
   },
   {
