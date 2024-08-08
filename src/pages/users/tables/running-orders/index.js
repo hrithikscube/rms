@@ -5,6 +5,7 @@ import { Fragment } from 'react';
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
+import Secondarybtn from '@/components/Secondarybtn';
 
 
 let category_types = [
@@ -157,26 +158,31 @@ const Tables = () => {
 
                 <div className="flex flex-col p-5 w-full">
                     <div className="flex flex-col bg-white w-full rounded-lg">
-                        <div className="h-12 flex items-center">
-                            {React.Children.toArray(
-                                category_types.map((item) => (
-                                    <button
-                                        onClick={() => {
-                                            setActiveMenu(item.slug)
-                                        }}
-                                        className={`h-full flex-shrink-0 px-10 relative w-fit text-sm font-medium ${activeMenu === item?.slug
-                                            ? 'text-blue-600'
-                                            : 'text-[#121212]'
-                                            }`}
-                                    >
-                                        {item?.name}
+                        <div className="h-12 flex items-center justify-between">
+                            <div className='flex items-center h-full'>
+                                {React.Children.toArray(
+                                    category_types.map((item) => (
+                                        <button
+                                            onClick={() => {
+                                                setActiveMenu(item.slug)
+                                            }}
+                                            className={`h-full flex-shrink-0 px-10 relative w-fit text-sm font-medium ${activeMenu === item?.slug
+                                                ? 'text-blue-600'
+                                                : 'text-[#121212]'
+                                                }`}
+                                        >
+                                            {item?.name}
 
-                                        {activeMenu === item.slug && (
-                                            <div className="border border-blue-600 absolute bottom-0 left-0 w-full" />
-                                        )}
-                                    </button>
-                                )),
-                            )}
+                                            {activeMenu === item.slug && (
+                                                <div className="border border-blue-600 absolute bottom-0 left-0 w-full" />
+                                            )}
+                                        </button>
+                                    )),
+                                )}
+                            </div>
+                            <div className='pr-2'>
+                                <Secondarybtn label="Refresh" />
+                            </div>
                         </div>
 
                         <div className="h-24 w-full bg-blue-50 flex items-center justify-center">

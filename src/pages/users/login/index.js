@@ -104,7 +104,7 @@ const Login = () => {
                     <p className="text-xs text-[#808080] font-medium">
                       Password
                     </p>
-                   
+
                     <Input
                       type="password"
                       name="password"
@@ -114,7 +114,7 @@ const Login = () => {
 
                     <div className="flex items-center justify-between w-full mt-2">
                       <div className="flex items-center gap-2">
-                        <input className='w-3 h-3' id="remember_me" type='checkbox' name="remember_me" value={params.remember_me} onChange={handleCheckbox} />
+                        <input className='w-3 h-3' id="remember_me" type='checkbox' name="remember_me" checked={params.remember_me} onChange={handleCheckbox} />
                         <label htmlFor="remember_me" className="text-xs font-medium select-none cursor-pointer">Rememeber Me</label>
                       </div>
                       <button

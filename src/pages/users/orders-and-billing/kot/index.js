@@ -147,7 +147,7 @@ let dummy_data = [
 ]
 
 const KOT = () => {
-    const [showFilters, setShowFilter] = useState(false)
+    const [showFilters, setShowFilter] = useState(true)
 
     const [params, setParams] = useState({
         start_date: '',
