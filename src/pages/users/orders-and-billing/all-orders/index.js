@@ -5,6 +5,9 @@ import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import Image from 'next/image';
 import Input from '@/components/Input';
+import Primarybtn from '@/components/Primarybtn';
+import Secondarybtn from '@/components/Secondarybtn';
+import Ternarybtn from '@/components/Ternarybtn';
 
 let links = [
     {
@@ -188,7 +191,7 @@ const AllOrders = () => {
         sub_order_type: '',
         payment_type: '',
         order_status: '',
-        other_staus: '',
+        other_status: '',
         grand_total: '',
         gstin: '',
     })
@@ -219,6 +222,69 @@ const AllOrders = () => {
             value: params.end_date,
             handleChange: handleChange,
             label: 'End Date'
+        },
+        {
+            name: 'customer_name',
+            type: 'text',
+            value: params.customer_name,
+            handleChange: handleChange,
+            label: 'Customer Name'
+        },
+        {
+            name: 'customer_phone',
+            type: 'text',
+            value: params.customer_phone,
+            handleChange: handleChange,
+            label: 'Customer Phone'
+        },
+        {
+            name: 'order_type',
+            type: 'text',
+            value: params.order_type,
+            handleChange: handleChange,
+            label: 'Order Type'
+        },
+        {
+            name: 'sub_order_type',
+            type: 'text',
+            value: params.sub_order_type,
+            handleChange: handleChange,
+            label: 'Sub Order Type'
+        },
+        {
+            name: 'payment_type',
+            type: 'text',
+            value: params.payment_type,
+            handleChange: handleChange,
+            label: 'Payment Type'
+        },
+        {
+            name: 'order_status',
+            type: 'text',
+            value: params.order_status,
+            handleChange: handleChange,
+            label: 'Order Status'
+        },
+        {
+            name: 'other_status',
+            type: 'text',
+            value: params.other_status,
+            handleChange: handleChange,
+            label: 'Other Status'
+        },
+        {
+            name: 'grand_total',
+            type: 'text',
+            value: params.grand_total,
+            handleChange: handleChange,
+            label: 'Grand Total'
+        },
+        {
+            name: 'gstin',
+            type: 'text',
+            value: params.gstin,
+            handleChange: handleChange,
+            label: 'GSTIN'
         },
     ]
 
@@ -256,8 +322,8 @@ const AllOrders = () => {
 
                     {
                         showFilters ?
-                            <div className='flex flex-col h-40 w-full lg:p-5 px-4 bg-white border-t border-[#808080]/20'>
-                                <div className='w-full flex flex-row flex-wrap gap-4'>
+                            <div className='flex flex-col min-h-40 w-full items-center lg:p-5 p-4 bg-white border-t border-[#808080]/20'>
+                                <div className='w-full grid lg:grid-cols-5 gap-4'>
                                     {
                                         React.Children.toArray(filterInputs.map((item) =>
                                             <Input
@@ -269,7 +335,17 @@ const AllOrders = () => {
                                             />
                                         ))
                                     }
+                                    <div className='lg:col-span-2 flex flex-row items-start lg:items-center gap-4'>
+                                        <Ternarybtn label="Search" />
+                                        <Secondarybtn label="Show All" />
+                                    </div>
+
                                 </div>
+
+                                <div className='w-full mt-4 bg-[#f2f2f2] rounded-lg flex items-center justify-end p-3'>
+                                    <Secondarybtn label="Clear All" />
+                                </div>
+
                             </div> : ''
                     }
 
