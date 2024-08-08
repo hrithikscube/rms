@@ -501,11 +501,10 @@ const Layout = ({ children }) => {
   return (
     <div className="flex flex-col w-full relative min-h-screen">
       <div className="h-12 bg-white w-full fixed top-0 left-0 z-[10] lg:px-5 px-4 flex items-center shadow justify-between">
-        <div className='invert'>
-          <Logo />
-        </div>
+
 
         <div className='flex flex-row items-center gap-4'>
+
           <button
             onClick={
               () => {
@@ -516,44 +515,48 @@ const Layout = ({ children }) => {
           >
             <Image width={28} height={28} src="/icons/burger.svg" alt="burger" className="w-7 h-7" />
           </button>
-
-          <button
-            onClick={() => {
-              setLMenu(!lmenu)
-            }}
-            className="text-sm text-white font-medium relative"
-          >
-            <div className='w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-[#121212]'>
-              A
-            </div>
-
-            {
-              lmenu && <div className='w-40 bg-blue-50 absolute top-10 shadow-xl right-0 overflow-hidden'>
-
-                {
-                  React.Children.toArray(["Edit Profile", "Logout"].map(item => (
-                    <button
-                      onClick={() => {
-                        if (item === 'Logout') {
-                          Router.push('/users/login')
-                        }
-                        setLMenu(false)
-                      }}
-                      className='text-xs py-2 text-[#121212] hover:bg-blue-500 hover:text-white w-full text-start px-3'>
-                      <p>{item}</p>
-                    </button>
-                  )))
-                }
-
-              </div>
-            }
-          </button>
         </div>
+
+        <div className='invert lg:hidden block'>
+          <Logo />
+        </div>
+
+        <button
+          onClick={() => {
+            setLMenu(!lmenu)
+          }}
+          className="text-sm text-white font-medium relative"
+        >
+          <div className='w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-[#121212]'>
+            A
+          </div>
+
+          {
+            lmenu && <div className='w-40 bg-blue-50 absolute top-10 shadow-xl right-0 overflow-hidden'>
+
+              {
+                React.Children.toArray(["Edit Profile", "Logout"].map(item => (
+                  <button
+                    onClick={() => {
+                      if (item === 'Logout') {
+                        Router.push('/users/login')
+                      }
+                      setLMenu(false)
+                    }}
+                    className='text-xs py-2 text-[#121212] hover:bg-blue-500 hover:text-white w-full text-start px-3'>
+                    <p>{item}</p>
+                  </button>
+                )))
+              }
+
+            </div>
+          }
+        </button>
 
       </div>
 
       <div className="w-full flex flex-row h-full flex-shrink-0 relative">
-        <div className={`lg:w-60 ${showMenu ? 'flex flex-col' : 'lg:flex flex-col hidden'} w-full h-full bg-[#121212] flex-shrink-0 overflow-y-auto fixed top-0 left-0 shadow z-[10]`}>
+        <div className={`lg:w-60 ${showMenu ? 'flex flex-col' : 'lg:flex flex-col hidden'} w-full h-full bg-[#121212] flex-shrink-0 overflow-y-auto fixed top-0 left-0 shadow lg:z-[10] z-[9]`}>
           <div className='flex items-center justify-start lg:justify-center h-12 flex-shrink-0 lg:pl-0 pl-4'>
             <Logo />
           </div>
