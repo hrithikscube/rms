@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React, { Fragment,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -24,8 +24,6 @@ const DuePaymentSettlement = () => {
     const [params, setParams] = useState({
         settle_from_pos: true
     })
-
-    console.log(params, 'params')
 
     const handleCheckbox = (e) => {
         let { name, checked } = e.target
