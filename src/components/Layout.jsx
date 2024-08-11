@@ -1,6 +1,6 @@
 import Footer from './Footer';
 import { useRouter } from 'next/router';
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Logo from './Logo';
 import Image from 'next/image';
 
@@ -506,10 +506,6 @@ const Layout = ({ children }) => {
           >
             <Image width={28} height={28} src="/icons/burger.svg" alt="burger" className="w-7 h-7" />
           </button>
-        </div>
-
-        <div className='invert lg:hidden block'>
-          <Logo />
         </div>
 
         <button
