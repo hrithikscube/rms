@@ -1,8 +1,10 @@
-import React, { Fragment,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
+import Ternarybtn from '@/components/Ternarybtn';
+import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
     {
@@ -51,6 +53,42 @@ let list_of_headers = [
 
 ]
 
+const list_of_types = [
+    {
+        name: 'Base Menu',
+        value: 'base_menu',
+    },
+    {
+        name: 'Home Delivery',
+        value: 'home_delivery',
+    },
+    {
+        name: 'Parcel',
+        value: 'parcel',
+    },
+    {
+        name: 'Dine In',
+        value: 'dene_in',
+    },
+    {
+        name: 'Swiggy',
+        value: 'swiggy',
+    },
+    {
+        name: 'Jungle Works',
+        value: 'jungle_works',
+    },
+    {
+        name: 'BlendVerse',
+        value: 'blendverse',
+    },
+    {
+        name: 'Magicpin',
+        value: 'magicpin',
+    },
+
+]
+
 const MenuAndDiscounts = () => {
 
     const [activeMenu, setActiveMenu] = useState('Categories')
@@ -73,6 +111,47 @@ const MenuAndDiscounts = () => {
                                 className={`text-xs font-semibold text-[#121212] h-full px-12 border-2 rounded-lg ${activeMenu === item.value ? 'bg-white border-blue-600' : 'border-transparent'}`}>{item.name}</button>
                         )))
                     }
+
+                </div>
+
+                <div className='w-full p-5 flex flex-col lg;gap-5 gap-4'>
+
+                    <div className='bg-white lg:p-5 p-4 flex flex-col w-full rounded-lg'>
+                        <div className='grid grid-cols-4 lg:gap-6 gap-4'>
+                            {
+                                React.Children.toArray(
+                                    list_of_types.map((item) => (
+                                        <div className='w-full h-24 border rounded-lg shadow flex items-center justify-center text-sm font-medium text-[#404040]'>
+                                            {item.name}
+                                        </div>
+                                    ))
+                                )
+                            }
+                        </div>
+
+                    </div>
+
+
+                    <div className='flex lg:flex-row items-start w-full h-60 flex-shrink-0 lg:gap-5 gap-4'>
+
+                        <div className='flex flex-col lg:w-3/12 bg-white h-full flex-shrink-0'>
+
+                        </div>
+
+                        <div className='flex flex-col lg:w-9/12 bg-white h-full flex-shrink-0'>
+
+                            <div className='h-12 bg-blue-50 w-full flex flex-row items-center justify-start px-4 gap-2'>
+                                <p className='text-sm'>Dedicated restaurant area not found</p>
+
+                                <div>
+                                    <Secondarybtn label="Create New" />
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
             </div>
