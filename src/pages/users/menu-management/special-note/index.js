@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import React, { Fragment,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -54,7 +54,7 @@ const dummy_data = [
 ];
 
 
-const OnlineMenuOnOff = () => {
+const SpecialNote = () => {
     const [showFilters, setShowFilter] = useState(true)
 
     const [params, setParams] = useState({
@@ -191,7 +191,7 @@ const OnlineMenuOnOff = () => {
     )
 }
 
-export default OnlineMenuOnOff
+export default SpecialNote
 
 export async function getServerSideProps() {
     let data = {}

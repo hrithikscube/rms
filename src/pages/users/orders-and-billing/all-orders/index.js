@@ -1,6 +1,6 @@
 
 import Head from 'next/head';
-import React, { Fragment,useState } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';

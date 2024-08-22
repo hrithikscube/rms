@@ -118,11 +118,6 @@ let modules_list = [
         isActive: false,
       },
       {
-        name: 'Suppliers',
-        link: '/users/inventory/suppliers',
-        isActive: false,
-      },
-      {
         name: 'Purchase',
         link: '/users/inventory/purchase',
         isActive: false,
@@ -332,37 +327,26 @@ let modules_list = [
     isActive: false,
     sub_modules: [
       {
-        name: 'Biller Group Management',
-        link: '/users/user-management/biller-group',
+        name: 'Biller Management',
+        link: '/users/user-management/biller-management',
         isActive: false,
-
       },
       {
-        name: 'Admin Group Management',
-        link: '/users/user-management/admin-group',
+        name: 'Biller Group Management',
+        link: '/users/user-management/biller-group-management',
         isActive: false,
 
       },
       {
         name: 'Admin Management',
-        link: '/users/user-management/admin',
+        link: '/users/user-management/admin-management',
         isActive: false,
-
       },
-    ]
-  },
-  {
-    name: 'Marketplace',
-    link: '/users/marketplace',
-    isActive: false,
-    sub_modules: [
-    ]
-  },
-  {
-    name: 'Suppliers Hub',
-    link: '/users/suppliers-hub',
-    isActive: false,
-    sub_modules: [
+      {
+        name: 'Admin Group Management',
+        link: '/users/user-management/admin-group-management',
+        isActive: false,
+      },
     ]
   },
   {
@@ -435,13 +419,6 @@ let modules_list = [
   {
     name: 'Store status tracking dashboard',
     link: '/users/store-status-tracking-dashboard',
-    isActive: false,
-    sub_modules: [
-    ]
-  },
-  {
-    name: 'Help Manual',
-    link: '/users/help-manual',
     isActive: false,
     sub_modules: [
     ]

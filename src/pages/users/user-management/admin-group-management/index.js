@@ -1,8 +1,5 @@
-
 import Head from 'next/head';
 import React, { Fragment, useState } from 'react';
-
-import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import Image from 'next/image';
 import Input from '@/components/Input';
@@ -10,67 +7,30 @@ import Secondarybtn from '@/components/Secondarybtn';
 import Ternarybtn from '@/components/Ternarybtn';
 import Primarybtn from '@/components/Primarybtn';
 
+
 let links = [
     {
         name: 'Dashboard',
         link: '/users/dashboard',
     },
     {
-        name: 'Menu Management',
+        name: 'User Management',
         link: '',
     },
     {
-        name: 'Set Item Commission',
+        name: 'Admin Group Management',
         link: '',
     },
 ]
 
-const dummy_data = [
-    {
-        item: 'item 1',
-        category: '24 Jun 2024',
-        price: '$129.99',
-        type: 'percentage',
-        value: '10',
-    },
-    {
-        item: 'item 2',
-        category: '25 Jun 2024',
-        price: '$89.99',
-        type: 'fixed',
-        value: '15',
-    },
-    {
-        item: 'item 3',
-        category: '26 Jun 2024',
-        price: '$199.99',
-        type: 'percentage',
-        value: '20',
-    },
-    {
-        item: 'item 4',
-        category: '27 Jun 2024',
-        price: '$49.99',
-        type: 'fixed',
-        value: '5',
-    },
-    {
-        item: 'item 5',
-        category: '28 Jun 2024',
-        price: '$149.99',
-        type: 'percentage',
-        value: '25',
-    }
-];
+const dummy_data = [...Array(5)]
 
 
-const SetItemCommission = () => {
+const AdminGroupManagement = () => {
     const [showFilters, setShowFilter] = useState(true)
 
     const [params, setParams] = useState({
-        category: '',
-        item: '',
-        commission_type: '',
+        search_key: '',
     })
 
     const handleChange = (e) => {
@@ -88,32 +48,18 @@ const SetItemCommission = () => {
     const filterInputs = [
 
         {
-            name: 'category',
+            name: 'search_key',
             type: 'text',
-            value: params.category,
+            value: params.search_key,
             handleChange: handleChange,
-            label: 'Category'
-        },
-        {
-            name: 'item',
-            type: 'text',
-            value: params.item,
-            handleChange: handleChange,
-            label: 'Item'
-        },
-        {
-            name: 'commission_type',
-            type: 'text',
-            value: params.commission_type,
-            handleChange: handleChange,
-            label: 'Commission Type'
+            label: 'Search'
         },
     ]
 
     return (
         <Fragment>
             <Head>
-                <title>Set Item Commission</title>
+                <title>Admin Group Management</title>
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
@@ -123,8 +69,8 @@ const SetItemCommission = () => {
 
                         <div className='flex lg:items-center items-end lg:flex-row flex-col gap-4'>
 
-                            <Primarybtn label="Add Item Commission" />
-                            <Secondarybtn label="Actions" />
+                            <Primarybtn label="Create Admin Group" />
+                            <Secondarybtn label="Export" />
 
 
                         </div>
@@ -177,15 +123,14 @@ const SetItemCommission = () => {
 
                     <div className="flex flex-col w-full overflow-x-auto flex-shrink-0">
 
-                        <div className="lg:grid lg:grid-cols-6 flex flex-row w-full flex-shrink-0 ">
+                        <div className="lg:grid lg:grid-cols-5 flex flex-row w-full flex-shrink-0 ">
                             {React.Children.toArray(
                                 [
-                                    'Item',
-                                    'Category',
-                                    'Item Price',
-                                    'Commission Type',
-                                    'Commission Value',
-                                    'Actions',
+                                    'dummy_col_name',
+                                    'dummy_col_name',
+                                    'dummy_col_name',
+                                    'dummy_col_name',
+                                    'dummy_col_name',
                                 ].map((item) => (
                                     <div className="lg:w-full w-40 flex-shrink-0 text-xs text-[#121212] font-medium bg-white/60 py-3 px-4 border-y border-[#808080]/20">
                                         {item}
@@ -196,21 +141,18 @@ const SetItemCommission = () => {
 
                         {React.Children.toArray(
                             dummy_data.map((item) => (
-                                <div className="lg:grid lg:grid-cols-6 flex flex-row w-full flex-shrink-0">
+                                <div className="lg:grid lg:grid-cols-5 flex flex-row w-full flex-shrink-0">
                                     <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
-                                        {item?.item ?? '-'}
+                                        -
                                     </div>
                                     <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
-                                        {item?.category ?? '-'}
+                                        -
                                     </div>
                                     <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
-                                        {item?.price ?? '-'}
+                                        -
                                     </div>
                                     <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
-                                        {item?.type ?? '-'}
-                                    </div>
-                                    <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
-                                        {item?.value ?? '-'}
+                                        -
                                     </div>
                                     <div className="text-xs text-[#121212] font-medium lg:w-full w-40 bg-white py-3 px-4 border-b border-[#808080]/20 flex-shrink-0">
                                         -
@@ -225,7 +167,7 @@ const SetItemCommission = () => {
     )
 }
 
-export default SetItemCommission
+export default AdminGroupManagement
 
 export async function getServerSideProps() {
     let data = {}
