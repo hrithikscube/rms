@@ -313,12 +313,6 @@ let modules_list = [
         isActive: false,
 
       },
-      {
-        name: 'Marketplace Settings',
-        link: '/users/configuration/marketplace-settings',
-        isActive: false,
-
-      },
     ]
   },
   {

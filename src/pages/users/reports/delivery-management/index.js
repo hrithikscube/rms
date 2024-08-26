@@ -127,11 +127,11 @@ const DeliveryManagement = () => {
 
                         <div className='lg:w-9/12 flex flex-col gap-4'>
                             {/* search */}
-                            <div className='w-full p-3 bg-slate-200 flex items-center justify-between rounded-lg'>
+                            <div className='w-full p-3 bg-white flex items-center justify-between rounded-lg'>
 
-                                <input placeholder='Search for reports here...' className='outline-none bg-slate-100 border border-[#808080]/40  rounded w-6/12 text-xs p-2 placeholder:text-xs placeholder:font-medium' />
+                                <input placeholder='Search for reports here...' className='outline-none bg-transparent border border-[#808080]/40  rounded w-6/12 text-xs p-2 placeholder:text-xs placeholder:font-medium' />
 
-                                <button className='w-10 h-10 rounded bg-red-50 flex items-center justify-center'>
+                                <button className='w-10 h-10 rounded bg-blue-50 flex items-center justify-center'>
                                     <Image width={20} height={20} src="/icons/settings.svg" alt="settings-icon" className='w-5 h-5' />
                                 </button>
 

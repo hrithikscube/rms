@@ -85,8 +85,8 @@ const DeleteOutlets = () => {
                         checked={item.checked}
                         onChange={(e) => {
                           handleCheckbox(e, index)
-                        }} className="w-3 h-3 cursor-pointer" />
-                      <label for={item.id} className='text-xs font-medium select-none cursor-pointer'>{item.name}</label>
+                        }} className="w-4 h-4 cursor-pointer" />
+                      <label for={item.id} className='text-sm select-none cursor-pointer'>{item.name}</label>
                     </div>
                   )))
                 }

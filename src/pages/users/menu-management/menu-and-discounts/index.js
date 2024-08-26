@@ -131,28 +131,6 @@ const MenuAndDiscounts = () => {
 
                     </div>
 
-
-                    <div className='flex lg:flex-row items-start w-full h-60 flex-shrink-0 lg:gap-5 gap-4'>
-
-                        <div className='flex flex-col lg:w-3/12 bg-white h-full flex-shrink-0'>
-
-                        </div>
-
-                        <div className='flex flex-col lg:w-9/12 bg-white h-full flex-shrink-0'>
-
-                            <div className='h-12 bg-blue-50 w-full flex flex-row items-center justify-start px-4 gap-2'>
-                                <p className='text-sm'>Dedicated restaurant area not found</p>
-
-                                <div>
-                                    <Secondarybtn label="Create New" />
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </Fragment>
