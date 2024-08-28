@@ -1,10 +1,7 @@
 import React, { Fragment, useState } from 'react';
 
 import Head from 'next/head';
-import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
-import Ternarybtn from '@/components/Ternarybtn';
-import Secondarybtn from '@/components/Secondarybtn';
 
 let links = [
     {
@@ -100,7 +97,9 @@ const MenuAndDiscounts = () => {
             </Head>
             <div className="w-full h-full flex flex-col flex-shrink-0">
                 <Breadcrumb links={links} />
-                <div className='h-10 flex items-center px-10 justify-evenly w-full bg-blue-50 border-y border-[#808080]/10'>
+
+
+                <div className='h-10 flex items-center px-10 justify-evenly w-full bg-blue-100 border-y border-[#808080]/10'>
 
                     {
                         React.Children.toArray(list_of_headers.map(item => (
@@ -108,7 +107,7 @@ const MenuAndDiscounts = () => {
                                 onClick={() => {
                                     setActiveMenu(item.value)
                                 }}
-                                className={`text-xs font-semibold text-[#121212] h-full px-12 border-2 rounded-lg ${activeMenu === item.value ? 'bg-white border-blue-600' : 'border-transparent'}`}>{item.name}</button>
+                                className={`text-sm font-semibold text-[#121212] h-full px-12 border-2 rounded ${activeMenu === item.value ? 'bg-white border-blue-600' : 'border-transparent'}`}>{item.name}</button>
                         )))
                     }
 
@@ -116,12 +115,12 @@ const MenuAndDiscounts = () => {
 
                 <div className='w-full p-5 flex flex-col lg;gap-5 gap-4'>
 
-                    <div className='bg-white lg:p-5 p-4 flex flex-col w-full rounded-lg'>
+                    <div className='bg-white lg:p-5 p-4 flex flex-col w-full'>
                         <div className='grid grid-cols-4 lg:gap-6 gap-4'>
                             {
                                 React.Children.toArray(
                                     list_of_types.map((item) => (
-                                        <div className='w-full h-24 border rounded-lg shadow flex items-center justify-center text-sm font-medium text-[#404040]'>
+                                        <div className='w-full h-24 border rounded-lg shadow flex items-center justify-center text-sm font-semibold text-[#404040]'>
                                             {item.name}
                                         </div>
                                     ))

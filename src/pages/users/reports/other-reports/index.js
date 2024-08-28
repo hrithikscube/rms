@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { Fragment, useState } from 'react';
-
-import Layout from '@/components/Layout';
 import Breadcrumb from '@/components/Breadcrumb';
 import FavoriteCard from '../(components)/FavoriteCard';
 
@@ -118,7 +116,7 @@ const OtherReports = () => {
                                         onClick={() => {
                                             setFav(item.value)
                                         }}
-                                        className={`h-[42px] px-3 relative text-start text-xs font-medium ${fav === item.value ? 'text-blue-600 bg-blue-50' : 'text-[#1212121] hover:bg-[#808080]/10'}`}>
+                                        className={`h-[42px] px-3 relative text-start text-xs font-medium ${fav === item.value ? 'text-blue-600 bg-blue-100' : 'text-[#1212121] hover:bg-[#808080]/10'}`}>
                                         {item.name}
                                     </button>
                                 )))
@@ -131,7 +129,7 @@ const OtherReports = () => {
 
                                 <input placeholder='Search for reports here...' className='outline-none bg-transparent border border-[#808080]/40  rounded w-6/12 text-xs p-2 placeholder:text-xs placeholder:font-medium' />
 
-                                <button className='w-10 h-10 rounded bg-blue-50 flex items-center justify-center'>
+                                <button className='w-10 h-10 rounded bg-blue-100 flex items-center justify-center'>
                                     <Image width={20} height={20} src="/icons/settings.svg" alt="settings-icon" className='w-5 h-5' />
                                 </button>
 

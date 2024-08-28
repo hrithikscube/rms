@@ -1,6 +1,6 @@
 import Input from '@/components/Input';
 import Logo from '@/components/Logo';
-import Primarybtn from '@/components/Primarybtn';
+import PrimaryButton from '@/components/PrimaryButton';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React, { Fragment, useState } from 'react';
@@ -73,7 +73,7 @@ const Login = () => {
                     handleChange={handleChange}
                   />
 
-                  <Primarybtn onClick={() => toggleInit(false)} label="Submit" width="w-full" />
+                  <PrimaryButton onClick={() => toggleInit(false)} label="Submit" width="w-full" />
                 </div>
               </Fragment>
             ) : (
@@ -126,7 +126,7 @@ const Login = () => {
                     </div>
                   </div>
 
-                  <Primarybtn onClick={() => Router.push('/users/dashboard')} label="Sign in" width="w-full" />
+                  <PrimaryButton onClick={() => Router.push('/users/dashboard')} label="Sign in" width="w-full" />
 
                 </div>
               </Fragment>

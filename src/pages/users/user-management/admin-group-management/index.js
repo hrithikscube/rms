@@ -3,9 +3,7 @@ import React, { Fragment, useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import Image from 'next/image';
 import Input from '@/components/Input';
-import Secondarybtn from '@/components/Secondarybtn';
-import Ternarybtn from '@/components/Ternarybtn';
-import Primarybtn from '@/components/Primarybtn';
+import PrimaryButton from '@/components/PrimaryButton';
 
 
 let links = [
@@ -69,8 +67,8 @@ const AdminGroupManagement = () => {
 
                         <div className='flex lg:items-center items-end lg:flex-row flex-col gap-4'>
 
-                            <Primarybtn label="Create Admin Group" />
-                            <Secondarybtn label="Export" />
+                            <PrimaryButton label="Create Admin Group" />
+                            <PrimaryButton variant="outlined-black" label="Export" />
 
 
                         </div>
@@ -82,7 +80,7 @@ const AdminGroupManagement = () => {
                         <div className='w-full flex items-center justify-between h-16'>
                             <div className='flex items-center gap-2'>
                                 <Image src="/icons/search.svg" alt="search" width={16} height={16} />
-                                <p className='text-xs font-semibold text-[#121212]'>Search</p>
+                                <p className='text-sm font-semibold text-[#121212]'>Search</p>
                             </div>
 
                             <Image src="/icons/accArrow.svg" alt="search" width={10} height={10} />
@@ -107,15 +105,15 @@ const AdminGroupManagement = () => {
                                         ))
                                     }
                                     <div className='lg:col-span-2 flex flex-row items-start lg:items-center gap-4'>
-                                        <Ternarybtn label="Search" />
-                                        <Secondarybtn label="Show All" />
+                                        <PrimaryButton variant="outlined" label="Search" />
+                                        <PrimaryButton variant="outlined-black" label="Show All" />
 
                                     </div>
 
                                 </div>
 
                                 <div className='w-full mt-4 bg-[#f2f2f2] rounded-lg flex items-center justify-end p-3'>
-                                    <Secondarybtn label="Clear All" />
+                                    <PrimaryButton variant="outlined-black" label="Clear All" />
                                 </div>
 
                             </div> : ''

@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React, { Fragment } from 'react';
 import Breadcrumb from "@/components/Breadcrumb";
-import Primarybtn from "@/components/Primarybtn";
-import Secondarybtn from "@/components/Secondarybtn";
+import PrimaryButton from '@/components/PrimaryButton';
+
 
 let links = [
     {
@@ -83,7 +83,7 @@ const InventoryDashboard = () => {
                 <div className="flex flex-col p-5 w-full">
                     <div className="flex flex-col w-full h-20 bg-white items-end justify-center px-4">
 
-                        <Secondarybtn label="Search" />
+                        <PrimaryButton variant="outlined-black" label="Search" />
 
                     </div>
                     <div className="flex flex-col h-12 w-full px-5">
@@ -119,9 +119,9 @@ const InventoryDashboard = () => {
                             )))
                         }
                     </div>
-                    <div className="flex flex-col w-full h-20 bg-blue-50 items-end justify-center px-4">
+                    <div className="flex flex-col w-full h-20 bg-blue-100 items-end justify-center px-4">
 
-                        <Primarybtn label="Save" />
+                        <PrimaryButton label="Save" />
 
                     </div>
                 </div>

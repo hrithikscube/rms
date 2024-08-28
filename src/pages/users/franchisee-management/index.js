@@ -1,8 +1,8 @@
 import Head from "next/head";
 import React, { Fragment } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
-import Ternarybtn from "@/components/Ternarybtn";
-import Secondarybtn from "@/components/Secondarybtn";
+import PrimaryButton from '@/components/PrimaryButton';
+
 
 let links = [
   {
@@ -35,8 +35,8 @@ const FranchiseeManagement = () => {
             <input placeholder="Name" className="p-2 text-xs px-3 outline-none bg-white border border-[#808080]/40 rounded-lg" />
             <input placeholder="Ref id" className="p-2 text-xs px-3 outline-none bg-white border border-[#808080]/40 rounded-lg" />
 
-            <Ternarybtn label="Search" />
-            <Secondarybtn label="Show All" />
+            <PrimaryButton variant="outlined" label="Search" />
+            <PrimaryButton variant="outlined-black" label="Show All" />
 
 
           </div>
@@ -65,14 +65,14 @@ const FranchiseeManagement = () => {
                   <p className="text-xs text-[#121212]">{item?.outlet}</p>
                   <p className="text-xs text-[#121212]">{item?.ref_id}</p>
                   <div>
-                    <Ternarybtn label="Lock" />
+                    <PrimaryButton variant="outlined" label="Lock" />
                   </div>
 
                 </div>
               )))
             }
           </div>
-          <div className="flex flex-col w-full h-12 bg-blue-50 items-start justify-center px-4">
+          <div className="flex flex-col w-full h-12 bg-blue-100 items-start justify-center px-4">
 
             <p className="text-[#121212] text-xs font-medium">Showing {dummy_data.length} out of {dummy_data.length} results</p>
 

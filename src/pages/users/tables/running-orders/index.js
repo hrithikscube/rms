@@ -1,11 +1,10 @@
 
 
 import Head from 'next/head';
-import React, { Fragment,useState } from 'react';
-
-import Layout from '@/components/Layout';
+import React, { Fragment, useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
-import Secondarybtn from '@/components/Secondarybtn';
+import PrimaryButton from '@/components/PrimaryButton';
+
 
 
 let category_types = [
@@ -130,21 +129,6 @@ let links = [
     },
 ]
 
-const RenderStats = (list) => {
-    return (
-        <Fragment>
-            {React.Children.toArray(
-                list.map((item) => (
-                    <div className="flex flex-col px-10 text-center">
-                        <p className="text-xs font-medium">{item.name}</p>
-                        <p className="text-sm font-semibold text-[#121212]">{item.value}</p>
-                    </div>
-                )),
-            )}
-        </Fragment>
-    )
-}
-
 const Tables = () => {
     const [activeMenu, setActiveMenu] = useState('running_orders')
 
@@ -157,7 +141,7 @@ const Tables = () => {
                 <Breadcrumb links={links} />
 
                 <div className="flex flex-col p-5 w-full">
-                    <div className="flex flex-col bg-white w-full rounded-lg">
+                    <div className="flex flex-col bg-white w-full">
                         <div className="h-12 flex items-center justify-between">
                             <div className='flex items-center h-full'>
                                 {React.Children.toArray(
@@ -181,18 +165,18 @@ const Tables = () => {
                                 )}
                             </div>
                             <div className='pr-2'>
-                                <Secondarybtn label="Refresh" />
+                                <PrimaryButton variant="outlined-black" label="Refresh" />
                             </div>
                         </div>
 
-                        <div className="h-24 w-full bg-blue-50 flex items-center justify-center">
+                        <div className="h-24 w-full bg-blue-100 flex items-center justify-center">
                             <div className="flex flex-row items-center justify-center flex-wrap divide-x divide-[#808080]">
                                 {activeMenu === 'running_orders' &&
                                     React.Children.toArray(
                                         running_orders_stats.map((item) => (
                                             <div className="flex flex-col px-10 text-center">
-                                                <p className="text-xs font-medium">{item.name}</p>
-                                                <p className="text-sm font-semibold text-[#121212]">
+                                                <p className="text-sm font-medium">{item.name}</p>
+                                                <p className="text-base font-semibold text-[#121212]">
                                                     {item.value}
                                                 </p>
                                             </div>
@@ -203,8 +187,8 @@ const Tables = () => {
                                     React.Children.toArray(
                                         running_table_stats.map((item) => (
                                             <div className="flex flex-col px-10 text-center">
-                                                <p className="text-xs font-medium">{item.name}</p>
-                                                <p className="text-sm font-semibold text-[#121212]">
+                                                <p className="text-sm font-medium">{item.name}</p>
+                                                <p className="text-base font-semibold text-[#121212]">
                                                     {item.value}
                                                 </p>
                                             </div>
@@ -218,14 +202,14 @@ const Tables = () => {
                                 {React.Children.toArray(
                                     order_types.map((item) => (
                                         <div className="flex flex-col h-56 shadow-lg border border-[#808080]/20 rounded-lg p-4 justify-around text-center">
-                                            <p className="text-xs font-semibold text-[#808080]">
+                                            <p className="text-sm font-semibold text-[#808080]">
                                                 {item.name}
                                             </p>
                                             <div className="flex flex-col">
                                                 <p className="text-xs font-semibold text-[#808080]">
                                                     {item.orders.name}
                                                 </p>
-                                                <p className="text-sm font-semibold text-[#121212]">
+                                                <p className="text-base font-semibold text-[#121212]">
                                                     {item.orders.value}
                                                 </p>
                                             </div>
@@ -234,7 +218,7 @@ const Tables = () => {
                                                 <p className="text-xs font-semibold text-[#808080]">
                                                     {item.est_obj.name}
                                                 </p>
-                                                <p className="text-sm font-semibold text-[#121212]">
+                                                <p className="text-base font-semibold text-[#121212]">
                                                     {item.est_obj.value}
                                                 </p>
                                             </div>

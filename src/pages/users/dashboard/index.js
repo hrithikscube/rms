@@ -179,14 +179,14 @@ const Dashboard = () => {
       <div className="w-full lg:h-full flex flex-col flex-shrink-0 lg:pb-5 pb-10">
 
         <div className="w-full lg:h-14 flex lg:flex-row flex-col lg:gap-0 gap-5 lg:items-center items-start lg:text-center text-start justify-between px-5 bg-white shadow lg:py-0 py-4">
-          <p className="text-xs font-medium text-[#121212]">
+          <p className="text-sm font-medium text-[#121212]">
             Outlet Statistics
           </p>
 
           <div className="lg:flex hidden lg:flex-row flex-col lg:items-center items-start lg:text-center text-start gap-5">
-            <p className="text-xs font-medium text-[#121212]">Export Data</p>
-            <p className="text-xs font-medium text-[#121212]">Create Zone</p>
-            <p className="text-xs font-medium text-[#121212]">Date</p>
+            <p className="text-sm font-medium text-[#121212]">Export Data</p>
+            <p className="text-sm font-medium text-[#121212]">Create Zone</p>
+            <p className="text-sm font-medium text-[#121212]">Date</p>
           </div>
         </div>
 
@@ -195,18 +195,18 @@ const Dashboard = () => {
             {React.Children.toArray(
               dashboard_stats.map((item) => (
                 <div className="min-h-40 lg:w-full md:w-1/2 w-full flex-shrink-0 snap-center rounded-lg shadow bg-white p-4 flex flex-col items-start justify-between text-start">
-                  <p className="text-sm text-[#121212] font-medium">
+                  <p className="lg:text-base text-sm text-[#121212] font-semibold">
                     {item?.title}
                   </p>
 
-                  <p className="text-base font-semibold">{item.value}</p>
-                  <p className="text-xs">{item.info}</p>
+                  <p className="lg:text-lg text-base font-bold tracking-wide">{item.value}</p>
+                  <p className="text-sm">{item.info}</p>
                 </div>
               )),
             )}
           </div>
 
-          
+
         </div>
 
         <div className="flex flex-col gap-4 lg:px-5 px-4 lg:pb-6 pb-4">

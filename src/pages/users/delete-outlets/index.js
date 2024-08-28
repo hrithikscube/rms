@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Breadcrumb from '@/components/Breadcrumb';
-import Primarybtn from '@/components/Primarybtn';
 import React, { Fragment, useState } from 'react';
-import Secondarybtn from '@/components/Secondarybtn';
+import PrimaryButton from '@/components/PrimaryButton';
 
 let links = [
   {
@@ -96,14 +95,14 @@ const DeleteOutlets = () => {
 
             </div>
 
-            <div className='w-full flex flex-row items-end justify-end p-3 bg-blue-50'>
+            <div className='w-full flex flex-row items-end justify-end p-3 bg-blue-100'>
 
               <div className='flex items-center gap-2'>
-                <Secondarybtn
+                <PrimaryButton variant="outlined-black"
                   onClick={() => {
                     setResData(dummy_data)
                   }} label="Cancel" />
-                <Primarybtn onClick={deleteSelectedItems} label="Delete" />
+                <PrimaryButton onClick={deleteSelectedItems} label="Delete" />
               </div>
 
             </div>

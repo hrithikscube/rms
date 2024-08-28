@@ -43,10 +43,10 @@ const DuePaymentSettlement = () => {
 
                     <div className='bg-white w-full rounded-lg shadow overflow-hidden'>
 
-                        <div className='w-full bg-blue-50 px-4 py-6 flex items-center justify-end'>
+                        <div className='w-full bg-blue-100 px-4 py-6 flex items-center justify-end'>
                             <div className='flex flex-row items-center gap-2'>
                                 <input id="settle_from_pos" type="checkbox" name="settle_from_pos" checked={params.settle_from_pos} onChange={handleCheckbox} className='w-4 h-4 cursor-pointer' />
-                                <label htmlFor='settle_from_pos' className='text-xs font-semibold text-[#121212] select-none cursor-pointer'>Settle From POS</label>
+                                <label htmlFor='settle_from_pos' className='text-sm font-semibold text-[#121212] select-none cursor-pointer'>Settle From POS</label>
                             </div>
                         </div>
 

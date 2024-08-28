@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import React, { Fragment } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
-import Primarybtn from '@/components/Primarybtn';
+import PrimaryButton from '@/components/PrimaryButton';
+
 
 let links = [
   {
@@ -30,7 +31,7 @@ const UserManagement = () => {
 
             <div className='w-full flex flex-row items-end justify-end p-3'>
 
-              <Primarybtn label="Add" />
+              <PrimaryButton label="Add" />
 
             </div>
 

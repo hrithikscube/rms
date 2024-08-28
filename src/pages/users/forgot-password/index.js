@@ -2,8 +2,8 @@ import Head from 'next/head';
 import Logo from '@/components/Logo';
 import Input from '@/components/Input';
 import { useRouter } from 'next/router';
-import Primarybtn from '@/components/Primarybtn';
-import React, { Fragment,useState } from 'react';
+import PrimaryButton from '@/components/PrimaryButton';
+import React, { Fragment, useState } from 'react';
 
 
 const ForgotPassword = () => {
@@ -54,7 +54,7 @@ const ForgotPassword = () => {
             </div>
 
             <div className="flex flex-col items-start w-full gap-4">
-         
+
               <Input
                 label="Enter address or mobile number"
                 type="text"
@@ -64,8 +64,8 @@ const ForgotPassword = () => {
               />
 
               <div className="flex flex-col w-full">
-               
-                <Primarybtn width="w-full" label="Reset Password" />
+
+                <PrimaryButton width="w-full" label="Reset Password" />
 
                 <button
                   onClick={() => Router.push('/users/login')}

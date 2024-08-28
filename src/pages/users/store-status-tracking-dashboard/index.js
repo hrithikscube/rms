@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import React, { Fragment,useState } from 'react';
-
-import Layout from '@/components/Layout';
+import React, { Fragment, useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 
 let links = [

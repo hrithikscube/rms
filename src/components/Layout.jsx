@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import React, { Fragment, useEffect, useState } from 'react';
 import Logo from './Logo';
 import Image from 'next/image';
+import ClickAwayListener from './ClickAwayListener';
 
 let modules_list = [
   {
@@ -429,10 +430,10 @@ const Layout = ({ children }) => {
 
   const updateActiveState = (modules) => {
     return modules.map((module) => {
-      const isActive = module.link === asPath || module.sub_modules.some(sub => sub.link === asPath);
+      const isActive = asPath.includes(module.link) || module.sub_modules.some(sub => asPath.includes(sub.link));
       const updatedSubModules = module.sub_modules.map((sub) => ({
         ...sub,
-        isActive: sub.link === asPath,
+        isActive: asPath.includes(sub.link),
 
       }));
       return {
@@ -489,26 +490,29 @@ const Layout = ({ children }) => {
             A
           </div>
 
-          {
-            lmenu && <div className='w-40 bg-blue-50 absolute top-10 shadow-xl right-0 overflow-hidden'>
+          <ClickAwayListener onClickAway={() => setLMenu(false)}>
+            {
+              lmenu && <div className='w-40 bg-blue-50 absolute top-10 shadow-xl right-0 overflow-hidden'>
 
-              {
-                React.Children.toArray(["Edit Profile", "Logout"].map(item => (
-                  <button
-                    onClick={() => {
-                      if (item === 'Logout') {
-                        Router.push('/users/login')
-                      }
-                      setLMenu(false)
-                    }}
-                    className='text-xs py-2 text-[#121212] hover:bg-blue-500 hover:text-white w-full text-start px-3'>
-                    <p>{item}</p>
-                  </button>
-                )))
-              }
+                {
+                  React.Children.toArray(["Edit Profile", "Logout"].map(item => (
+                    <button
+                      onClick={() => {
+                        if (item === 'Logout') {
+                          Router.push('/users/login')
+                        }
+                        setLMenu(false)
+                      }}
+                      className='text-sm py-2 text-[#121212] hover:bg-blue-500 hover:text-white w-full text-start px-3'>
+                      <p>{item}</p>
+                    </button>
+                  )))
+                }
 
-            </div>
-          }
+              </div>
+            }
+          </ClickAwayListener>
+
         </button>
 
       </div>
@@ -540,7 +544,7 @@ const Layout = ({ children }) => {
                         }
                       }
                     }}
-                    className={`h-[46px] w-full px-5 text-xs font-medium text-start relative ${item.isActive
+                    className={`h-[46px] w-full px-5 2xl:text-sm text-xs font-medium text-start relative ${item.isActive
                       ? item.sub_modules.length > 0 ? 'text-white bg-[#27272A]' : 'text-white bg-blue-600'
                       : 'text-white'
                       }`}
@@ -561,7 +565,7 @@ const Layout = ({ children }) => {
                           Router.push(child.link)
                           // setShowMenu(false)
                         }}
-                        className={`h-[46px] w-full px-5 text-xs font-medium text-start ${child.isActive
+                        className={`h-[46px] w-full px-5 2xl:text-sm text-xs font-medium text-start ${child.isActive
                           ? 'text-white bg-blue-600'
                           : 'text-white'
                           }`}

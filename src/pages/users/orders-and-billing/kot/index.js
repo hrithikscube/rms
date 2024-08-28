@@ -2,12 +2,10 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Input from '@/components/Input';
-import React, { Fragment,useState } from 'react';
-
-import Layout from '@/components/Layout';
-import Ternarybtn from '@/components/Ternarybtn';
+import React, { Fragment, useState } from 'react';
+import PrimaryButton from '@/components/PrimaryButton';
 import Breadcrumb from '@/components/Breadcrumb';
-import Secondarybtn from '@/components/Secondarybtn';
+
 
 let links = [
     {
@@ -243,7 +241,7 @@ const KOT = () => {
 
                 <div className="flex flex-col p-5 w-full flex-shrink-0">
 
-                    <div className="h-16 w-full relative flex items-center justify-start text-start pl-8 bg-blue-50 mt-5">
+                    <div className="h-16 w-full relative flex items-center justify-start text-start pl-8 bg-blue-100 mt-5">
                         <div className="h-full w-2 bg-blue-600 absolute top-0 left-0" />
 
                         <h2 className="lg:text-sm text-xs font-semibold text-[#121212]">
@@ -256,7 +254,7 @@ const KOT = () => {
                         <div className='w-full flex items-center justify-between h-16'>
                             <div className='flex items-center gap-2'>
                                 <Image src="/icons/search.svg" alt="search" width={16} height={16} />
-                                <p className='text-xs font-semibold text-[#121212]'>Search</p>
+                                <p className='text-sm font-semibold text-[#121212]'>Search</p>
                             </div>
 
                             <Image src="/icons/accArrow.svg" alt="search" width={10} height={10} />
@@ -281,14 +279,14 @@ const KOT = () => {
                                         ))
                                     }
                                     <div className='lg:col-span-2 flex flex-row items-start lg:items-center gap-4'>
-                                        <Ternarybtn label="Search" />
-                                        <Secondarybtn label="Show All" />
+                                        <PrimaryButton variant="outlined" label="Search" />
+                                        <PrimaryButton variant="outlined-black" label="Show All" />
                                     </div>
 
                                 </div>
 
                                 <div className='w-full mt-4 bg-[#f2f2f2] rounded-lg flex items-center justify-end p-3'>
-                                    <Secondarybtn label="Clear All" />
+                                    <PrimaryButton variant="outlined-black" label="Clear All" />
                                 </div>
 
                             </div> : ''
